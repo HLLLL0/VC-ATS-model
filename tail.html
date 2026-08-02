@@ -87,9 +87,9 @@ function render(){
     const jobsLabel = c.jobs.total==null ? "Roles: see careers page" : `${c.jobs.total} open role${c.jobs.total===1?"":"s"}`;
     const roles=c.jobs.top.map(r=>`<a href="${r.u}" target="_blank" rel="noopener">→ ${esc(r.t)}</a>`).join("")
       + (c.jobs.total!=null && c.jobs.total>c.jobs.top.length?`<div class="more">${c.jobs.top.length?"+ ":""}${c.jobs.total-c.jobs.top.length} more on careers page</div>`:"");
-    const refreshBtn = c.apolloId
+    const refreshBtn = (c.apolloId && LIVE_REFRESH_AVAILABLE)
       ? `<button class="refresh" onclick="refreshJobs('${c.apolloId}',this)">Refresh jobs (1 credit)</button>`
-      : `<span style="font-size:11px;color:var(--muted)" title="Apollo enrichment pending">refresh unavailable</span>`;
+      : `<span style="font-size:11px;color:var(--muted)" title="Live refresh only works inside Cowork">refresh unavailable</span>`;
     return `<div class="card">
       <div class="card-head">
         <div><div class="cname"><a href="https://${c.domain}" target="_blank" rel="noopener">${esc(c.name)}</a></div>
@@ -161,7 +161,10 @@ function renderVcJobs(){
     </div>`;}).join("");
 }
 
+const LIVE_REFRESH_AVAILABLE = typeof window.cowork !== "undefined" && typeof window.cowork.callMcpTool === "function";
+
 async function refreshJobs(id,btn){
+  if(!LIVE_REFRESH_AVAILABLE){ btn.disabled=true; btn.textContent="Unavailable here"; return; }
   if(!confirm("Pull live job postings from Apollo? This consumes 1 Apollo credit.")) return;
   btn.disabled=true; btn.textContent="Refreshing…";
   try{
