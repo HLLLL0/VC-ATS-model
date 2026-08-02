@@ -1,0 +1,3534 @@
+{
+  "updated": "2026-08-02",
+  "note": "Seed data verified via Apollo enrichment + job postings on 2026-06-10. Entries added by the daily discovery task are marked verified:false until enriched in Apollo.",
+  "topTierVCs": [
+    "Sequoia",
+    "Andreessen Horowitz",
+    "a16z",
+    "Benchmark",
+    "Accel",
+    "Lightspeed",
+    "Index Ventures",
+    "Greylock",
+    "Founders Fund",
+    "General Catalyst",
+    "Khosla Ventures",
+    "Kleiner Perkins",
+    "Bessemer",
+    "Insight Partners",
+    "ICONIQ",
+    "Coatue",
+    "Thrive Capital",
+    "GV",
+    "Battery Ventures",
+    "Redpoint",
+    "Menlo Ventures",
+    "IVP",
+    "NEA",
+    "Felicis",
+    "Union Square Ventures",
+    "Forerunner",
+    "Bond",
+    "Peak XV",
+    "Y Combinator",
+    "First Round"
+  ],
+  "vcJobsNote": "US VC fund roles matched to 0-2 yrs experience (Analyst/Associate/Fellow/junior Investor + platform roles). Sourced from startupandvc.com and venturecapitalcareers.com. Refreshed by the daily task; full list lives in the artifact's VCJOBS array.",
+  "companies": [
+    {
+      "verified": true,
+      "apolloId": "679bbd962ae5f70001ce50ff",
+      "name": "Town",
+      "domain": "town.com",
+      "location": "San Francisco, CA",
+      "description": "Personal AI assistants that work across email, calendar, messages and work apps.",
+      "employees": 29,
+      "growth6m": -0.17,
+      "round": {
+        "type": "Series A",
+        "amountM": 55,
+        "currency": "$",
+        "date": "2026-06-03",
+        "leads": [
+          "Andreessen Horowitz"
+        ],
+        "investors": [
+          "Andreessen Horowitz",
+          "First Round Capital",
+          "Forerunner Ventures",
+          "Conviction",
+          "Alt Capital"
+        ],
+        "newsUrl": "https://www.techtimes.com/articles/317916/20260606/personal-ai-assistant-startup-town-raises-55-million-andreessen-horowitz.htm"
+      },
+      "jobs": {
+        "total": 3,
+        "careersUrl": "https://jobs.ashbyhq.com/town"
+      }
+    },
+    {
+      "verified": true,
+      "apolloId": "627961d589096b00f5a9ce56",
+      "name": "NewLimit",
+      "domain": "newlimit.com",
+      "location": "South San Francisco, CA",
+      "description": "Epigenetic reprogramming medicines targeting aging; co-founded by Brian Armstrong.",
+      "employees": 51,
+      "growth6m": 0.15,
+      "round": {
+        "type": "Series C",
+        "amountM": 435,
+        "currency": "$",
+        "date": "2026-06-05",
+        "leads": [
+          "Founders Fund"
+        ],
+        "investors": [
+          "Founders Fund",
+          "Kleiner Perkins",
+          "Thrive Capital",
+          "Valor Equity Partners",
+          "Greenoaks",
+          "Lilly Ventures",
+          "Nat Friedman",
+          "Quiet Capital"
+        ],
+        "newsUrl": "https://blog.newlimit.com/p/newlimit-raises-435m-led-by-founders"
+      },
+      "jobs": {
+        "total": 17,
+        "careersUrl": "https://job-boards.greenhouse.io/newlimit"
+      }
+    },
+    {
+      "verified": true,
+      "apolloId": "5ed02cefda1c7000016cc42d",
+      "name": "Supabase",
+      "domain": "supabase.com",
+      "location": "San Francisco, CA (remote)",
+      "description": "Open-source Postgres backend-as-a-service; auth, storage, edge functions, vectors.",
+      "employees": 350,
+      "growth6m": 0.23,
+      "round": {
+        "type": "Series F",
+        "amountM": 500,
+        "currency": "$",
+        "date": "2026-06-04",
+        "leads": [
+          "Accel",
+          "Peak XV Partners"
+        ],
+        "investors": [
+          "Accel",
+          "Peak XV Partners",
+          "Coatue",
+          "GIC",
+          "Y Combinator",
+          "Felicis",
+          "Salesforce Ventures",
+          "Stripe",
+          "Georgian",
+          "Craft Ventures"
+        ],
+        "newsUrl": "https://www.thesaasnews.com/news/supabase-raises-500m-series-f/"
+      },
+      "jobs": {
+        "total": 44,
+        "careersUrl": "https://jobs.ashbyhq.com/supabase"
+      }
+    },
+    {
+      "verified": true,
+      "apolloId": "648747c2acd90400c3a0d8d4",
+      "name": "Legora",
+      "domain": "legora.com",
+      "location": "Stockholm, Sweden (global)",
+      "description": "AI-powered collaborative workspace for lawyers and law firms.",
+      "employees": 280,
+      "growth6m": 1.32,
+      "round": {
+        "type": "Series D",
+        "amountM": 600,
+        "currency": "$",
+        "date": "2026-04-15",
+        "leads": [
+          "General Catalyst",
+          "ICONIQ"
+        ],
+        "investors": [
+          "General Catalyst",
+          "ICONIQ",
+          "Bessemer Venture Partners",
+          "Insight Partners",
+          "Benchmark",
+          "Accel",
+          "Redpoint",
+          "Y Combinator",
+          "Bain Capital",
+          "Menlo Ventures",
+          "Atlassian",
+          "NVentures"
+        ],
+        "newsUrl": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors"
+      },
+      "jobs": {
+        "total": 237,
+        "careersUrl": "https://jobs.ashbyhq.com/legora"
+      }
+    },
+    {
+      "verified": true,
+      "apolloId": "67e2bf15b079660011e07b94",
+      "name": "Nexthop AI",
+      "domain": "nexthop.ai",
+      "location": "Santa Clara, CA",
+      "description": "Custom networking hardware/software for hyperscaler AI clusters; founded by ex-Arista COO.",
+      "employees": 170,
+      "growth6m": 0.34,
+      "round": {
+        "type": "Series B",
+        "amountM": 500,
+        "currency": "$",
+        "date": "2026-03-10",
+        "leads": [
+          "Lightspeed Venture Partners"
+        ],
+        "investors": [
+          "Lightspeed Venture Partners",
+          "Andreessen Horowitz",
+          "Kleiner Perkins",
+          "Battery Ventures",
+          "Altimeter",
+          "WestBridge Capital",
+          "Emergent Ventures",
+          "USIT Fund"
+        ],
+        "newsUrl": "https://www.businesswire.com/news/home/20260310574112/en/Nexthop-AI-Accelerates-Into-Hypergrowth-With-Oversubscribed-%24500M-Series-B-Funding-Catapulting-the-Companys-Valuation-to-%244.2-Billion"
+      },
+      "jobs": {
+        "total": 2,
+        "careersUrl": "https://www.linkedin.com/company/nexthopai/jobs/"
+      }
+    },
+    {
+      "verified": true,
+      "apolloId": "6740a230b5a18903eb23b4bc",
+      "name": "Peec AI",
+      "domain": "peec.ai",
+      "location": "Berlin, Germany",
+      "description": "Brand visibility analytics for AI search engines (GEO); 1,300+ brands, $4M+ ARR.",
+      "employees": 57,
+      "growth6m": -0.2,
+      "round": {
+        "type": "Series A",
+        "amountM": 20,
+        "currency": "€",
+        "date": "2025-11-15",
+        "leads": [
+          "Singular"
+        ],
+        "investors": [
+          "Singular",
+          "S20 Fund",
+          "Identity Ventures",
+          "Antler",
+          "Combination Ventures"
+        ],
+        "newsUrl": "https://sesamers.com/fundraising/peec-ai-18m-series-a-brand-visibility-tools/",
+        "note": "News reports a newer $21M round led by Lightspeed in H1 2026 not yet in Apollo."
+      },
+      "jobs": {
+        "total": 42,
+        "careersUrl": "https://jobs.ashbyhq.com/Peec"
+      }
+    },
+    {
+      "verified": true,
+      "apolloId": "642113224f8ac100016323d4",
+      "name": "Suno",
+      "domain": "suno.com",
+      "location": "Cambridge, MA",
+      "description": "Generative AI music creation platform; 12M+ users, Suno Studio DAW.",
+      "employees": 410,
+      "growth6m": 0.28,
+      "round": {
+        "type": "Series D",
+        "amountM": 400,
+        "currency": "$",
+        "date": "2026-06-03",
+        "leads": [
+          "Bond"
+        ],
+        "investors": [
+          "Bond",
+          "Lightspeed Venture Partners",
+          "Union Square Ventures",
+          "Menlo Ventures",
+          "IVP",
+          "Forerunner Ventures"
+        ],
+        "newsUrl": "https://www.bloomberg.com/news/articles/2026-06-03/ai-music-startup-suno-raises-capital-at-5-4-billion-valuation"
+      },
+      "jobs": {
+        "total": 67,
+        "careersUrl": "https://jobs.ashbyhq.com/suno"
+      }
+    },
+    {
+      "verified": true,
+      "apolloId": "6708da8ef227bf01b001df82",
+      "name": "Rebar",
+      "domain": "withrebar.ai",
+      "location": "New York, NY",
+      "description": "AI operating system for commercial HVAC/electrical/plumbing suppliers; AI quote generation.",
+      "employees": 38,
+      "growth6m": 0.2,
+      "round": {
+        "type": "Series A",
+        "amountM": 14,
+        "currency": "$",
+        "date": "2026-03-10",
+        "leads": [
+          "Prudence"
+        ],
+        "investors": [
+          "Prudence",
+          "Founder Collective",
+          "Zero Infinity Partners",
+          "Optimist Ventures"
+        ],
+        "newsUrl": "https://venturebeat.com/business/rebar-closes-14m-series-a-led-by-prudence-to-rapidly-scale-its-ai-platform-for-hvac-electrical-and-plumbing-industries"
+      },
+      "jobs": {
+        "total": 14,
+        "careersUrl": "https://jobs.ashbyhq.com/rebar"
+      }
+    },
+    {
+      "verified": false,
+      "name": "NinjaOne",
+      "domain": "ninjaone.com",
+      "location": "Austin, TX",
+      "description": "Cloud-native endpoint management: patching, security, backup for 24,000+ customers.",
+      "round": {
+        "type": "Series F",
+        "amountM": 400,
+        "currency": "$",
+        "date": "2026-06-09",
+        "leads": [
+          "Wellington Management",
+          "Teachers' Venture Growth",
+          "Sequoia Capital",
+          "ICONIQ"
+        ],
+        "investors": [
+          "Wellington Management",
+          "Teachers' Venture Growth",
+          "Sequoia Capital",
+          "ICONIQ"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/10/venture-capital-startup-funding-roundup-june-102026/",
+        "note": "$400M+ at $12.3B valuation."
+      },
+      "jobs": {
+        "total": 74,
+        "careersUrl": "https://jobs.jobvite.com/ninjaone/jobs"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Generalist AI",
+      "domain": "generalistai.com",
+      "location": "San Francisco, CA",
+      "description": "Hardware-agnostic robotics foundation model (GEN-1); founders ex-DeepMind/OpenAI/Boston Dynamics.",
+      "round": {
+        "type": "Series A",
+        "amountM": 400,
+        "currency": "$",
+        "date": "2026-06-04",
+        "leads": [
+          "Radical Ventures"
+        ],
+        "investors": [
+          "Radical Ventures",
+          "8VC",
+          "Union Square Ventures",
+          "Norwest",
+          "Hanabi Capital",
+          "NVIDIA",
+          "Bezos Expeditions",
+          "Spark Capital",
+          "Boldstart"
+        ],
+        "newsUrl": "https://www.bloomberg.com/news/articles/2026-06-04/nvidia-backed-robotics-startup-generalist-ai-valued-at-2-billion",
+        "note": "$2B valuation. USV + Spark participating (top-tier)."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://generalistai.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Cellares",
+      "domain": "cellares.com",
+      "location": "South San Francisco, CA",
+      "description": "Automated end-to-end cell therapy manufacturing (Cell Shuttle); first IDMO.",
+      "round": {
+        "type": "Series D",
+        "amountM": 277,
+        "currency": "$",
+        "date": "2026-06-10",
+        "leads": [
+          "ARK Invest"
+        ],
+        "investors": [
+          "ARK Invest",
+          "NEA",
+          "RA Capital",
+          "Janus Henderson",
+          "Redmile",
+          "Andera Partners",
+          "BroadOak Capital"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/10/venture-capital-startup-funding-roundup-june-102026/",
+        "note": "NEA participating (top-tier). Total raised ~$632M."
+      },
+      "jobs": {
+        "total": 19,
+        "careersUrl": "https://www.cellares.com/careers/"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Digital Asset",
+      "domain": "digitalasset.com",
+      "location": "New York, NY",
+      "description": "Canton blockchain for regulated capital markets; banks and asset managers trade bonds/equities on-chain.",
+      "round": {
+        "type": "Late Stage",
+        "amountM": 355,
+        "currency": "$",
+        "date": "2026-06-11",
+        "leads": [
+          "Andreessen Horowitz (a16z Crypto)"
+        ],
+        "investors": [
+          "Andreessen Horowitz (a16z Crypto)",
+          "Dragoneer",
+          "Accel",
+          "Citi Ventures",
+          "Earlybird",
+          "Eight Roads",
+          "Pine Labs"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/11/venture-capital-startup-funding-roundup-june-11-2026/",
+        "note": "70+ investors; total raised ~$500M. a16z Crypto led (top-tier); Accel participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.digitalasset.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Poetic",
+      "domain": "poetic.com",
+      "location": "San Francisco, CA",
+      "description": "Deterministic AI automation for regulated enterprise work (underwriting, fraud, compliance); customers incl. SoFi, AIG, Chime.",
+      "round": {
+        "type": "Series A",
+        "amountM": 50,
+        "currency": "$",
+        "date": "2026-06-10",
+        "leads": [
+          "Kleiner Perkins"
+        ],
+        "investors": [
+          "Kleiner Perkins",
+          "Founders Fund",
+          "OpenAI",
+          "First Harmonic",
+          "Genius Ventures"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/poetic-raises-50m-series-a-to-automate-the-worlds-most-complex-enterprise-processes-with-reliable-ai-302796939.html",
+        "note": "$500M valuation; KP led (top-tier), Founders Fund participating. Emerged from stealth."
+      },
+      "jobs": {
+        "total": 7,
+        "careersUrl": "https://poetic.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Sarvam",
+      "domain": "sarvam.ai",
+      "location": "Bengaluru, India",
+      "description": "Full-stack sovereign AI for India: homegrown models, inference infrastructure, and enterprise apps tuned for local languages.",
+      "round": {
+        "type": "Series B",
+        "amountM": 234,
+        "currency": "$",
+        "date": "2026-06-15",
+        "leads": [
+          "HCLTech"
+        ],
+        "investors": [
+          "HCLTech",
+          "Bessemer Venture Partners",
+          "Khosla Ventures",
+          "Peak XV Partners"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/15/venture-capital-startup-funding-roundup-june-15-2026/",
+        "note": "$1.5B valuation; initial close of planned $300M Series B. Bessemer, Khosla, Peak XV (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.sarvam.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Hydra Host",
+      "domain": "hydrahost.com",
+      "location": "Miami, FL",
+      "description": "GPU marketplace/software brokering scarce AI compute; connects independent data centers' underused capacity to buyers.",
+      "round": {
+        "type": "Growth",
+        "amountM": 100,
+        "currency": "$",
+        "date": "2026-06-15",
+        "leads": [
+          "Kindred Ventures"
+        ],
+        "investors": [
+          "Kindred Ventures",
+          "Nvidia",
+          "ARK Invest",
+          "Magnetar",
+          "Founders Fund",
+          "Flume Ventures"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/15/venture-capital-startup-funding-roundup-june-15-2026/",
+        "note": "~$800M valuation; stage not disclosed. Founders Fund (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://jobs.gohire.io/hydra-host-uwnxgabz"
+      }
+    },
+    {
+      "verified": false,
+      "name": "NewCore",
+      "domain": "newcore.com",
+      "location": "Tel Aviv, Israel / San Francisco, CA",
+      "description": "Security-first identity platform for the agentic enterprise: authentication and governance for humans, machines, and AI agents.",
+      "round": {
+        "type": "Seed",
+        "amountM": 66,
+        "currency": "$",
+        "date": "2026-06-15",
+        "leads": [
+          "Cyberstarts"
+        ],
+        "investors": [
+          "Cyberstarts",
+          "Index Ventures",
+          "Evolution Equity Partners"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/15/venture-capital-startup-funding-roundup-june-15-2026/",
+        "note": "~$300M post-money; emerged from stealth. Index Ventures (top-tier) participating. Founders ex-Dome9."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://newcore.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Podium Automation",
+      "domain": "podiumautomation.com",
+      "location": "Brooklyn, NY",
+      "description": "Software-enabled industrial control-panel manufacturing; cuts delivery from 12+ weeks to under 4 weeks (UL 508A panels).",
+      "round": {
+        "type": "Series A",
+        "amountM": 18,
+        "currency": "$",
+        "date": "2026-06-15",
+        "leads": [
+          "Construct Capital"
+        ],
+        "investors": [
+          "Construct Capital",
+          "Andreessen Horowitz",
+          "Transition Ventures",
+          "Sunflower Capital",
+          "Banter Capital"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/15/venture-capital-startup-funding-roundup-june-15-2026/",
+        "note": "Total funding >$23M. a16z American Dynamism (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://jobs.ashbyhq.com/podium-automation"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Ent",
+      "domain": "ent.ai",
+      "location": "San Francisco, CA",
+      "description": "Intent-aware workspace security platform; preventive endpoint security for humans and AI agents (emerged from stealth).",
+      "round": {
+        "type": "Seed",
+        "amountM": 100,
+        "currency": "$",
+        "date": "2026-06-16",
+        "leads": [
+          "Decibel Venture Capital"
+        ],
+        "investors": [
+          "Decibel Venture Capital",
+          "Sequoia Capital",
+          "Crosspoint Capital",
+          "Craft Ventures",
+          "Shield Capital",
+          "Felicis",
+          "In-Q-Tel"
+        ],
+        "newsUrl": "https://www.businesswire.com/news/home/20260616680280/en/Ent-Emerges-from-Stealth-to-Bring-Prevention-Back-to-Cybersecurity",
+        "note": "Sequoia and Felicis (top-tier) participating. $100M seed."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://ent.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Bland",
+      "domain": "bland.ai",
+      "location": "San Francisco, CA",
+      "description": "Enterprise voice AI on proprietary voice models; handles 3.5M+ calls/week, 175M+ AI phone calls processed.",
+      "round": {
+        "type": "Series C",
+        "amountM": 50,
+        "currency": "$",
+        "date": "2026-06-16",
+        "leads": [
+          "Dell Technologies Capital"
+        ],
+        "investors": [
+          "Dell Technologies Capital",
+          "HubSpot Ventures",
+          "Archerman",
+          "Tribeca",
+          "Emergence Capital",
+          "Upfront Ventures",
+          "Scale Venture Partners",
+          "Y Combinator"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/16/venture-capital-startup-funding-roundup-june-15-2026-2/",
+        "note": "Y Combinator (top-tier) existing investor. Total raised >$100M."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://jobs.ashbyhq.com/bland"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Probably",
+      "domain": "probably.ai",
+      "location": "United States",
+      "description": "Harness-and-validator layer that catches LLM hallucinations and produces outputs with citations and audit trails.",
+      "round": {
+        "type": "Seed",
+        "amountM": 9,
+        "currency": "$",
+        "date": "2026-06-16",
+        "leads": [
+          "Andreessen Horowitz"
+        ],
+        "investors": [
+          "Andreessen Horowitz"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/16/venture-capital-startup-funding-roundup-june-15-2026-2/",
+        "note": "a16z (top-tier) led. Domain unconfirmed pending verification."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://probably.ai"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Odyssey",
+      "domain": "odyssey.ml",
+      "location": "Palo Alto, CA",
+      "description": "AI lab building general-purpose 'world models' that predict and interact with the physical world; offices in Palo Alto, London, Zurich.",
+      "round": {
+        "type": "Series B",
+        "amountM": 310,
+        "currency": "$",
+        "date": "2026-06-17",
+        "leads": [
+          "Natural Capital"
+        ],
+        "investors": [
+          "Natural Capital",
+          "Amazon",
+          "AMD Ventures",
+          "GV",
+          "EQT",
+          "In-Q-Tel"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/17/odyssey-raises-310-million-at-1-45-billion-valuation-to-build-ai-that-simulates-the-real-world/",
+        "note": "$1.45B valuation. GV (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://odyssey.ml/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Twenty",
+      "domain": "twenty.io",
+      "location": "Arlington, VA",
+      "description": "America's first VC-backed cyber warfare startup; AI-enabled offensive cyber systems for the U.S. military and Intelligence Community.",
+      "round": {
+        "type": "Series B",
+        "amountM": 100,
+        "currency": "$",
+        "date": "2026-06-17",
+        "leads": [
+          "Accel"
+        ],
+        "investors": [
+          "Accel",
+          "Friends & Family Capital",
+          "Point72 Ventures",
+          "Caffeinated Capital",
+          "General Catalyst",
+          "In-Q-Tel"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/americas-first-vc-backed-cyber-warfare-startup-raises-100m-series-b-at-1b-valuation-302802401.html",
+        "note": "$1B valuation; total funding $138M. Accel led + General Catalyst existing (top-tier)."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://twenty.io/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Convey",
+      "domain": "convey.dev",
+      "location": "San Francisco, CA",
+      "description": "Enterprise 'AI teammates' that let non-technical operators build and run autonomous workflows; customers incl. NBCUniversal, Samsara, Unity, Faire.",
+      "round": {
+        "type": "Series A",
+        "amountM": 38,
+        "currency": "$",
+        "date": "2026-06-17",
+        "leads": [
+          "Andreessen Horowitz"
+        ],
+        "investors": [
+          "Andreessen Horowitz",
+          "Khosla Ventures",
+          "Pear VC"
+        ],
+        "newsUrl": "https://www.businesswire.com/news/home/20260617486214/en/Convey-Raises-38-Million-Series-A-Led-by-Andreessen-Horowitz-to-Automate-Enterprise-Operations-with-AI-Teammates",
+        "note": "a16z led (top-tier); Khosla participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://convey.dev/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "CuspAI",
+      "domain": "cusp.ai",
+      "location": "Cambridge, UK",
+      "description": "AI 'search engine for materials' for discovering new materials in months; founders Chad Edwards and Max Welling. Partnerships with Meta, Hyundai.",
+      "round": {
+        "type": "Series B",
+        "amountM": 400,
+        "currency": "$",
+        "date": "2026-06-17",
+        "leads": [
+          "Kleiner Perkins"
+        ],
+        "investors": [
+          "Kleiner Perkins",
+          "Bezos Expeditions",
+          "NEA"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/17/jeff-bezos-backs-ai-materials-startup-cuspai-in-400m-round-at-2-6-billion-valuation/",
+        "note": "$2.6B valuation. Kleiner Perkins led; NEA (top-tier) existing investor."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://cusp.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Behavox",
+      "domain": "behavox.com",
+      "location": "London, UK",
+      "description": "AI-native controls platform for banks, asset managers, hedge funds and commodity firms; 100+ financial-institution customers.",
+      "round": {
+        "type": "Growth",
+        "amountM": 175,
+        "currency": "$",
+        "date": "2026-06-17",
+        "leads": [
+          "HPS Investment Partners"
+        ],
+        "investors": [
+          "HPS Investment Partners",
+          "SoftBank",
+          "Citigroup",
+          "Index Ventures",
+          "Hoxton Ventures"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/17/venture-capital-startup-funding-roundup-june-17-2026/",
+        "note": "Growth preferred equity from HPS (BlackRock). Index Ventures (top-tier) existing investor."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.behavox.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Flagright",
+      "domain": "flagright.com",
+      "location": "Santa Clara, CA (distributed)",
+      "description": "AI-native AML compliance and fraud-prevention platform for fintechs and banks; explainable AI for compliance operations.",
+      "round": {
+        "type": "Series A",
+        "amountM": 12.5,
+        "currency": "$",
+        "date": "2026-06-17",
+        "leads": [
+          "Infinity Ventures"
+        ],
+        "investors": [
+          "Infinity Ventures",
+          "Sella Direct Ventures",
+          "Frontline",
+          "Y Combinator"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/17/venture-capital-startup-funding-roundup-june-17-2026/",
+        "note": "Total raised $16.8M+. Y Combinator (top-tier) existing investor."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://flagright.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Gradial",
+      "domain": "gradial.com",
+      "location": "Seattle, WA",
+      "description": "AI 'operating system for marketing'; agents that author, optimize, tag and QA campaigns across Adobe, Salesforce, ServiceNow and Databricks. Customers incl. AWS, Prudential, T-Mobile, Vanguard, Kaiser Permanente, U.S. Bank.",
+      "round": {
+        "type": "Series C",
+        "amountM": 65,
+        "currency": "$",
+        "date": "2026-06-18",
+        "leads": [
+          "Insight Partners"
+        ],
+        "investors": [
+          "Insight Partners",
+          "Madrona",
+          "VMG Partners",
+          "Pruven"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/18/venture-capital-startup-funding-roundup-june-18-2026/",
+        "note": "$675M valuation; total raised >$120M. Insight Partners (top-tier) led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://job-boards.greenhouse.io/gradial"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Andera",
+      "domain": "andera.ai",
+      "location": "San Francisco, CA",
+      "description": "AI-native internal audit and SOX control-testing platform; agentic retrieval automates control testing and workpaper generation for Fortune 100 audit teams and public accounting firms.",
+      "round": {
+        "type": "Series A",
+        "amountM": 37,
+        "currency": "$",
+        "date": "2026-06-17",
+        "leads": [
+          "Lightspeed Venture Partners"
+        ],
+        "investors": [
+          "Lightspeed Venture Partners"
+        ],
+        "newsUrl": "https://www.finsmes.com/2026/06/andera-raises-37m-in-series-a-funding.html",
+        "note": "Lightspeed (top-tier) led. Founders Aryo Patel (ex-Microsoft Azure, Jane Street) and Tinah Hong."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.andera.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Pramaana Labs",
+      "domain": "pramaanalabs.ai",
+      "location": "San Francisco, CA",
+      "description": "Formal-verification layer for AI; translates domain knowledge into formal representations and returns inspectable proof artifacts for high-stakes regulated verticals (law, tax, drug discovery, cybersecurity, financial compliance).",
+      "round": {
+        "type": "Seed",
+        "amountM": 27,
+        "currency": "$",
+        "date": "2026-06-17",
+        "leads": [
+          "Khosla Ventures"
+        ],
+        "investors": [
+          "Khosla Ventures",
+          "Accel",
+          "BoldCap",
+          "Nexus Venture Partners",
+          "Premji Invest",
+          "Founders Future",
+          "Unbound"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/06/17/pramaana-labs-raises-27-million-seed-round-from-khosla-ventures-to-bring-formal-verification-to-ai/",
+        "note": "Khosla Ventures led; Accel participating (both top-tier). Follow-on seed; founders are IIT Madras alumni Ranjan Rajagopalan, Krishnan Raghavan, Sanjay Ganapathy."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://pramaanalabs.ai/"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Baseten",
+      "domain": "baseten.co",
+      "location": "San Francisco, CA",
+      "description": "AI inference infrastructure; runs models in production across 20+ clouds. Revenue run-rate reportedly tripled to ~$600M in a quarter. Customers incl. Cursor, Mercor, OpenEvidence.",
+      "round": {
+        "type": "Series F",
+        "amountM": 1500,
+        "currency": "$",
+        "date": "2026-06-18",
+        "leads": [
+          "Altimeter Capital",
+          "Conviction",
+          "Spark Capital",
+          "Sands Capital",
+          "Wellington Management"
+        ],
+        "investors": [
+          "Altimeter Capital",
+          "Conviction",
+          "Spark Capital",
+          "Sands Capital",
+          "Wellington Management",
+          "IVP",
+          "Greylock",
+          "Bond",
+          "CapitalG",
+          "NVIDIA"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/",
+        "note": "~$11-13B valuation (dual-tier). Round reported closing ~June 18, 2026. New co-leads are NOT on the top-tier list, but top-tier existing backers IVP, Greylock, Bond and CapitalG remain in the cap table. Reported/closing; pending verification."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.baseten.co/careers/"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Cadence",
+      "domain": "cadence.care",
+      "location": "New York, NY",
+      "description": "Clinical AI platform for remote patient monitoring and chronic care management across the nation's largest health systems.",
+      "round": {
+        "type": "Series C",
+        "amountM": 100,
+        "currency": "$",
+        "date": "2026-06-23",
+        "leads": [
+          "Spark Capital"
+        ],
+        "investors": [
+          "Spark Capital",
+          "Thrive Capital",
+          "General Catalyst",
+          "Coatue",
+          "B Capital",
+          "Corewell Health Ventures",
+          "Memorial Hermann",
+          "Duke Health"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/23/venture-capital-startup-funding-roundup-june-23-2026/",
+        "note": "Thrive Capital, General Catalyst, Coatue (top-tier) participating. Spark Capital led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.cadence.care/open-roles"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Assort Health",
+      "domain": "assorthealth.com",
+      "location": "San Francisco, CA",
+      "description": "Healthcare AI agents for the patient journey; 'Patient Journey Memory' connects scheduling, intake, real-time eligibility, refills and payments. $1.2B valuation.",
+      "round": {
+        "type": "Series C",
+        "amountM": 120,
+        "currency": "$",
+        "date": "2026-06-24",
+        "leads": [
+          "Menlo Ventures"
+        ],
+        "investors": [
+          "Menlo Ventures",
+          "Lightspeed Venture Partners",
+          "Felicis",
+          "First Round Capital",
+          "Chemistry",
+          "Joe Montana (Liquid 2)",
+          "Tau Ventures",
+          "Quiet Capital"
+        ],
+        "newsUrl": "https://www.assorthealth.com/blog/assort-health-raises-120-million-series-c-to-scale-largest-deployment-of-ai-agents-for-the-patient-journey",
+        "note": "Menlo Ventures led; Lightspeed, Felicis, First Round (top-tier) participating. Total raised >$222M."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.assorthealth.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Probook",
+      "domain": "probook.ai",
+      "location": "United States",
+      "description": "AI operating system for home-services businesses (HVAC, plumbing, electrical); automates dispatch, intake, data scrubbing and customer messaging. Founder George Eliadis.",
+      "round": {
+        "type": "Series A",
+        "amountM": 40,
+        "currency": "$",
+        "date": "2026-06-23",
+        "leads": [
+          "Andreessen Horowitz",
+          "Sequoia Capital"
+        ],
+        "investors": [
+          "Andreessen Horowitz",
+          "Sequoia Capital"
+        ],
+        "newsUrl": "https://www.globenewswire.com/news-release/2026/6/23/3316215/0/en/Probook-Raises-40M-from-Andreessen-Horowitz-and-Sequoia-to-Scale-the-AI-Operating-System-for-Home-Services.html",
+        "note": "$34M Series A led by a16z + $6M seed led by Sequoia (both top-tier). $40M total."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://probook.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Catena Labs",
+      "domain": "catenalabs.com",
+      "location": "Boston, MA",
+      "description": "Regulated financial infrastructure for AI agents; building an AI-native financial institution + national trust bank. Founded by Circle co-founder Sean Neville (USDC).",
+      "round": {
+        "type": "Series A",
+        "amountM": 30,
+        "currency": "$",
+        "date": "2026-06-23",
+        "leads": [
+          "Andreessen Horowitz (a16z crypto)",
+          "Acrew Capital"
+        ],
+        "investors": [
+          "Andreessen Horowitz (a16z crypto)",
+          "Acrew Capital",
+          "Breyer Capital",
+          "General Catalyst",
+          "QED",
+          "Oak",
+          "Fin",
+          "IDG Capital"
+        ],
+        "newsUrl": "https://thesiliconreview.com/2026/06/catena-labs-30-million-series-a-sequoia-paradigm-startup-funding-news",
+        "note": "Co-led by a16z crypto + Acrew; General Catalyst (top-tier) participating. Total funding ~$48M. Filed for NY State Trust Bank charter."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://catenalabs.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Scaled Cognition",
+      "domain": "scaledcognition.com",
+      "location": "Mountain View, CA",
+      "description": "Model lab building agentic models (flagship APT) purpose-built for reliable, in-policy action-taking in enterprise customer-experience workflows; founded by Dan Roth (ex-Microsoft CVP) and Dan Klein (UC Berkeley).",
+      "round": {
+        "type": "Series A",
+        "amountM": 100,
+        "currency": "$",
+        "date": "2026-06-25",
+        "leads": [
+          "Khosla Ventures"
+        ],
+        "investors": [
+          "Khosla Ventures",
+          "Genesys"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/25/venture-capital-startup-funding-roundup-june-25-2026/",
+        "note": "Khosla Ventures (top-tier) led. Offices in Mountain View, Boston, New York."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://jobs.ashbyhq.com/scaled-cognition"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Sail Research",
+      "domain": "sailresearch.com",
+      "location": "San Francisco, CA",
+      "description": "Infrastructure for long-horizon AI agents: a throughput-optimized inference stack plus 'Sailboxes', persistent stateful sandboxes that let agents run for hours or days without losing state.",
+      "round": {
+        "type": "Seed + Series A",
+        "amountM": 80,
+        "currency": "$",
+        "date": "2026-06-25",
+        "leads": [
+          "Kleiner Perkins",
+          "Sequoia"
+        ],
+        "investors": [
+          "Kleiner Perkins",
+          "Sequoia",
+          "Redpoint",
+          "Theory Ventures",
+          "CRV",
+          "A*",
+          "Abstract Ventures"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/25/venture-capital-startup-funding-roundup-june-25-2026/",
+        "note": "$450M valuation. Kleiner Perkins led Series A, Sequoia led seed, Redpoint participating (all top-tier)."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.sailresearch.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Warp",
+      "domain": "joinwarp.com",
+      "location": "New York, NY",
+      "description": "AI-native employee management platform for high-growth companies; automates payroll, multi-state tax registration/filings, benefits, global contractor payments and compliance. YC W23.",
+      "round": {
+        "type": "Series B",
+        "amountM": 60,
+        "currency": "$",
+        "date": "2026-06-25",
+        "leads": [
+          "Battery Ventures"
+        ],
+        "investors": [
+          "Battery Ventures",
+          "Peak XV",
+          "Sound Ventures",
+          "Y Combinator",
+          "HOF Capital"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/25/venture-capital-startup-funding-roundup-june-25-2026/",
+        "note": "Battery Ventures (top-tier) led; Peak XV and Y Combinator (top-tier) participating. Total raised $85M."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.joinwarp.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Arca",
+      "domain": "arcawealth.ai",
+      "location": "New York, NY",
+      "description": "AI-native wealth management that pairs high-touch advisors with AI handling repetitive admin; manages $1B+ in client assets. Founded by Rron Rexha (ex-Plaid).",
+      "round": {
+        "type": "Series A",
+        "amountM": 48.5,
+        "currency": "$",
+        "date": "2026-06-25",
+        "leads": [
+          "General Catalyst"
+        ],
+        "investors": [
+          "General Catalyst",
+          "Index Ventures",
+          "Venrock"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/25/venture-capital-startup-funding-roundup-june-25-2026/",
+        "note": "$64M total across seed + Series A. General Catalyst led; Index Ventures (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://arcawealth.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Alan",
+      "domain": "alan.com",
+      "location": "Paris, France",
+      "description": "AI-driven health insurance and care platform; first new health insurer licensed in France in three decades. €800M+ ARR, 1.1M+ members.",
+      "round": {
+        "type": "Series G",
+        "amountM": 480,
+        "currency": "€",
+        "date": "2026-06-25",
+        "leads": [
+          "Prosus"
+        ],
+        "investors": [
+          "Prosus",
+          "Index Ventures",
+          "Teachers' Venture Growth",
+          "Dara Holdings"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/alan-announces-a-480-million-financing-round-to-make-prevention-insurance-the-new-global-standard-in-healthcare-302809870.html",
+        "note": "€5.5B valuation. Prosus led; Index Ventures (top-tier) participating. Non-US (France)."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://alan.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Straiker",
+      "domain": "straiker.ai",
+      "location": "Mountain View, CA",
+      "description": "Agentic AI security platform; secures enterprise AI agents that reason, access tools and take action across systems. 'The agentic security company.'",
+      "round": {
+        "type": "Series A",
+        "amountM": 64,
+        "currency": "$",
+        "date": "2026-06-29",
+        "leads": [
+          "Marathon Management Partners",
+          "Citi Ventures",
+          "Illuminate Financial",
+          "Workday Ventures"
+        ],
+        "investors": [
+          "Marathon Management Partners",
+          "Citi Ventures",
+          "Illuminate Financial",
+          "Workday Ventures",
+          "Bain Capital Ventures",
+          "Lightspeed"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/29/straiker-raises-64m-series-a-as-enterprises-rush-to-secure-ai-agents/",
+        "note": "Total raised $85M. Lightspeed (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.straiker.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Nebex",
+      "domain": "nebex.com",
+      "location": "New York, NY",
+      "description": "Market infrastructure for the global space economy; connects space companies with sovereign buyers and the capital that moves deals. Founded by ex-Axiom Space CEO Tejpaul Bhatia.",
+      "round": {
+        "type": "Seed",
+        "amountM": 30,
+        "currency": "$",
+        "date": "2026-06-29",
+        "leads": [
+          "GV"
+        ],
+        "investors": [
+          "GV",
+          "Eniac Ventures",
+          "2048 Ventures",
+          "Better Tomorrow Ventures",
+          "Oceans Ventures",
+          "AIN Ventures",
+          "Also Capital",
+          "Anagram",
+          "Armory Square Ventures",
+          "Multiball Capital",
+          "Trajectory Capital",
+          "VSC Ventures"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/29/former-axiom-space-ceos-fintech-startup-nebex-raises-30m-seed-led-by-google-ventures/",
+        "note": "GV (top-tier) led. Banking relationship with J.P. Morgan."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.nebex.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Baz",
+      "domain": "baz.co",
+      "location": "San Francisco, CA",
+      "description": "AI code-review platform; specialized coding agents run on every pull request to catch breaking changes, vulnerabilities and design flaws before code ships. 100+ customers.",
+      "round": {
+        "type": "Extended Seed",
+        "amountM": 9,
+        "currency": "$",
+        "date": "2026-06-29",
+        "leads": [
+          "Battery Ventures",
+          "Boldstart Ventures"
+        ],
+        "investors": [
+          "Battery Ventures",
+          "Boldstart Ventures",
+          "AFG Partners",
+          "Disruptive VC"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/29/venture-capital-startup-funding-roundup-june-29-2026/",
+        "note": "Total raised $17M. Battery Ventures (top-tier) co-led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://baz.co/career"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Pocket",
+      "domain": "heypocket.com",
+      "location": "United States",
+      "description": "AI note-taking hardware; a $129 credit-card-shaped puck that sticks to a phone for recording, transcription and follow-ups. 130,000+ units sold, ~$27M ARR. YC W26.",
+      "round": {
+        "type": "Early-stage venture",
+        "amountM": 11,
+        "currency": "$",
+        "date": "2026-06-29",
+        "leads": [
+          "Accel"
+        ],
+        "investors": [
+          "Accel",
+          "Y Combinator",
+          "Mati Staniszewski",
+          "Guillermo Rauch",
+          "Kaz Nejatian"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/06/29/pocket-raises-11m-in-bet-on-rising-demand-for-ai-note-taking-devices/",
+        "note": "Accel led; Y Combinator (both top-tier) participating. Founders Akshay Narisetti and Gabriel Dymowski."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://heypocket.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Higharc",
+      "domain": "higharc.com",
+      "location": "Durham, NC",
+      "description": "AI-powered design-to-construction platform for homebuilders; new AI Estimating product with US LBM partnership brings AI into building-materials supply chain.",
+      "round": {
+        "type": "Series C",
+        "amountM": 95,
+        "currency": "$",
+        "date": "2026-06-30",
+        "leads": [
+          "Insight Partners"
+        ],
+        "investors": [
+          "Insight Partners",
+          "Wellington Management",
+          "Fifth Wall",
+          "Spark Capital",
+          "Lux Capital",
+          "SE Ventures",
+          "Simpson Strong-Tie",
+          "PSP Partners",
+          "RXR Arden Digital Ventures",
+          "Suffolk Technologies",
+          "Vertex Ventures",
+          "NC Tweener Fund",
+          "MetaProp"
+        ],
+        "newsUrl": "https://www.higharc.com/newsroom/higharc-95m-series-c-for-homebuilding-ai",
+        "note": "Total raised >$170M. Insight Partners (top-tier) led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.higharc.com/company/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Pie",
+      "domain": "getpie.com",
+      "location": "New York, NY",
+      "description": "AI growth infrastructure for small businesses (AI Search, Growth, and new Front Desk call-answering agent); founded by ex-Square/Toast operators.",
+      "round": {
+        "type": "Series A",
+        "amountM": 19.5,
+        "currency": "$",
+        "date": "2026-06-30",
+        "leads": [
+          "Lightspeed Venture Partners"
+        ],
+        "investors": [
+          "Lightspeed Venture Partners",
+          "Capital One Ventures",
+          "SciFi VC",
+          "F-Prime",
+          "Commerce Ventures",
+          "WEX Venture Capital"
+        ],
+        "newsUrl": "https://siliconangle.com/2026/06/30/pie-launches-19-5m-bring-ai-marketing-small-businesses/",
+        "note": "Total raised $23.7M. Lightspeed (top-tier) led. Emerged from stealth."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://getpie.com"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Proception",
+      "domain": "proception.ai",
+      "location": "San Francisco, CA",
+      "description": "Dexterous robotic hands (ProHand 1.0) plus a glove-based data-capture system (ProGlove) for contact-rich manipulation. Founded by ex-Tesla Optimus lead Jay Li. YC W25.",
+      "round": {
+        "type": "Seed",
+        "amountM": 11,
+        "currency": "$",
+        "date": "2026-06-29",
+        "leads": [
+          "First Round Capital"
+        ],
+        "investors": [
+          "First Round Capital",
+          "Y Combinator",
+          "BoxGroup"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/29/venture-capital-startup-funding-roundup-june-29-2026/",
+        "note": "First Round Capital led; Y Combinator (both top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.proception.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Together AI",
+      "domain": "together.ai",
+      "location": "San Francisco, CA",
+      "description": "AI neocloud renting Nvidia GPU clusters and AI-specific infrastructure; lets enterprises train and run AI on open-source models.",
+      "round": {
+        "type": "Series C",
+        "amountM": 800,
+        "currency": "$",
+        "date": "2026-07-01",
+        "leads": [
+          "Aramco Ventures"
+        ],
+        "investors": [
+          "Aramco Ventures",
+          "Vista Equity Partners",
+          "General Catalyst",
+          "Emergence Capital",
+          "Nvidia",
+          "March Capital",
+          "Pegatron",
+          "SentinelOne's S Ventures"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/",
+        "note": "$8.3B valuation. Aramco Ventures led; General Catalyst (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://job-boards.greenhouse.io/togetherai"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Quantum Systems",
+      "domain": "quantum-systems.com",
+      "location": "Gilching, Germany (US ops via Quantum Systems Inc.)",
+      "description": "Software-defined autonomous drone systems for defense, security and dual-use aerial intelligence; multi-domain autonomy across air, land and sea.",
+      "round": {
+        "type": "Series D",
+        "amountM": 1200,
+        "currency": "$",
+        "date": "2026-07-02",
+        "leads": [
+          "Blackstone",
+          "Noteus",
+          "Airbus",
+          "Advent"
+        ],
+        "investors": [
+          "Blackstone",
+          "Noteus",
+          "Airbus",
+          "Advent",
+          "Bond",
+          "Fidelity Management & Research Company",
+          "Wellington Management",
+          "A.P. Moller Holding",
+          "Elephant Lake Ventures",
+          "Balderton",
+          "HV Capital"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/02/german-drone-startup-quantum-systems-raises-1-2b-at-8b-valuation-as-investors-pour-billions-into-ai-defense/",
+        "note": "$8B post-money valuation. Bond (top-tier) participating; Balderton and HV Capital are existing shareholders."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://quantum-systems.com/us/careers-overview/"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Talp",
+      "domain": "talp.ai",
+      "location": "Istanbul, Turkey",
+      "description": "AI personas that simulate customer behavior; testing products, ads and pricing to predict real-world reactions before launch.",
+      "round": {
+        "type": "Pre-Seed",
+        "amountM": 20,
+        "currency": "$",
+        "date": "2026-07-02",
+        "leads": [
+          "Formus Capital",
+          "Sunshine Lake Ventures",
+          "Aito Capital",
+          "a16z Scout Fund"
+        ],
+        "investors": [
+          "Formus Capital",
+          "Sunshine Lake Ventures",
+          "Aito Capital",
+          "a16z Scout Fund"
+        ],
+        "newsUrl": "https://techfundingnews.com/meet-talp-ai-startup-with-turkish-roots-raising-20m-pre-seed-valuation-to-simulate-customers-with-ai-personas/",
+        "note": "a16z Scout Fund (top-tier program) participating. Founders Baran Ataş and Samet Alan."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://talp.ai/"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Dominion Dynamics",
+      "domain": "dominion-dynamics.com",
+      "location": "Ottawa, Canada",
+      "description": "Defense-tech 'neoprime' building the autonomy stack for the Arctic: AuraNet sensor/comms network and Scout, an AI-powered uncrewed drone.",
+      "round": {
+        "type": "Series A",
+        "amountM": 100,
+        "currency": "$",
+        "date": "2026-07-01",
+        "leads": [
+          "Georgian"
+        ],
+        "investors": [
+          "Georgian",
+          "Valor Equity Partners",
+          "Valor Atreides AI Fund",
+          "Expeditions",
+          "Lakestar",
+          "OMERS Ventures",
+          "Bessemer Venture Partners",
+          "Deloitte Ventures",
+          "Royal Bank of Canada",
+          "JDY Capital"
+        ],
+        "newsUrl": "https://betakit.com/dominion-dynamics-lands-139-million-in-canadas-largest-defence-tech-series-a/",
+        "note": "C$139M (~$100M USD). Bessemer Venture Partners (top-tier) participating. Domain unconfirmed pending verification; careers via Ashby."
+      },
+      "jobs": {
+        "total": 11,
+        "careersUrl": "https://jobs.ashbyhq.com/Dominion%20Dynamics"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Ramp",
+      "domain": "ramp.com",
+      "location": "New York, NY",
+      "description": "AI-native corporate card and finance operations platform (spend management, bill pay, procurement) for 70,000+ companies.",
+      "round": {
+        "type": "Series F",
+        "amountM": 750,
+        "currency": "$",
+        "date": "2026-06-04",
+        "leads": [
+          "ICONIQ",
+          "GIC",
+          "Ontario Teachers' Pension Plan"
+        ],
+        "investors": [
+          "ICONIQ",
+          "GIC",
+          "Ontario Teachers' Pension Plan",
+          "Goldman Sachs Alternatives",
+          "D.E. Shaw & Co.",
+          "Morgan Stanley Investment Management",
+          "Generation Investment Management",
+          "Insight Partners",
+          "BroadLight Capital",
+          "Founders Fund",
+          "Lightspeed Venture Partners",
+          "D1 Capital Partners",
+          "T. Rowe Price",
+          "General Catalyst"
+        ],
+        "newsUrl": "https://www.bloomberg.com/news/articles/2026-06-04/ramp-notches-44-billion-valuation-in-new-funding-round",
+        "note": "$44B valuation. ICONIQ, Insight Partners, Founders Fund, Lightspeed, General Catalyst all top-tier. Not yet in tracker despite being ~1 month old."
+      },
+      "jobs": {
+        "total": 216,
+        "careersUrl": "https://ramp.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Taktile",
+      "domain": "taktile.com",
+      "location": "New York, NY (offices Berlin, London, São Paulo, Iași)",
+      "description": "Agentic decision platform for banks and insurers; automates loan approvals, fraud triage, claims processing and onboarding while preserving human oversight and audit trails.",
+      "round": {
+        "type": "Series C",
+        "amountM": 110,
+        "currency": "$",
+        "date": "2026-06-24",
+        "leads": [
+          "Growth Equity at Goldman Sachs Alternatives"
+        ],
+        "investors": [
+          "Growth Equity at Goldman Sachs Alternatives",
+          "Balderton Capital",
+          "Index Ventures",
+          "Tiger Global",
+          "Y Combinator",
+          "Dig Ventures"
+        ],
+        "newsUrl": "https://www.businesswire.com/news/home/20260624713959/en/Taktile-Secures-$110M-in-Goldman-Sachs-Led-Series-C-to-Power-AI-Transformation-in-Financial-Institutions",
+        "note": "Total raised $184M. Index Ventures and Y Combinator (top-tier) participating; Goldman Sachs Alternatives led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://taktile.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "General Intuition",
+      "domain": "generalintuition.com",
+      "location": "New York, NY",
+      "description": "AI lab training foundation models on billions of gameplay clips (including action labels) for spatial-temporal reasoning that transfers to robotics and real-world agents.",
+      "round": {
+        "type": "Series A",
+        "amountM": 320,
+        "currency": "$",
+        "date": "2026-06-25",
+        "leads": [
+          "Khosla Ventures"
+        ],
+        "investors": [
+          "Khosla Ventures",
+          "General Catalyst",
+          "Jeff Bezos",
+          "Eric Schmidt",
+          "Nico Rosberg"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/",
+        "note": "$2.3B valuation. Khosla Ventures led; General Catalyst (both top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.generalintuition.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Peregrine Technologies",
+      "domain": "peregrine.io",
+      "location": "San Francisco, CA",
+      "description": "AI-enabled operational intelligence platform that unifies siloed government data; used by 400+ public safety agencies and to coordinate major events incl. the World Cup, Super Bowl and Grammys.",
+      "round": {
+        "type": "Series D",
+        "amountM": 250,
+        "currency": "$",
+        "date": "2026-06-22",
+        "leads": [
+          "Fifth Down Capital",
+          "Sequoia Capital",
+          "O.G. Venture Partners",
+          "Goldcrest Capital",
+          "XYZ Ventures",
+          "Godfrey Capital"
+        ],
+        "investors": [
+          "Fifth Down Capital",
+          "Sequoia Capital",
+          "O.G. Venture Partners",
+          "Goldcrest Capital",
+          "XYZ Ventures",
+          "Godfrey Capital"
+        ],
+        "newsUrl": "https://fortune.com/2026/06/22/exclusive-peregrine-nick-noone-ai-public-safety-palantir-2026-world-cup-just-sequoia-capital/",
+        "note": "$6.8B valuation. Sequoia Capital (top-tier) co-led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://peregrine.io/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Mirendil",
+      "domain": "mirendil.com",
+      "location": "San Francisco, CA",
+      "description": "Frontier AI research lab building autonomous systems that control their own GPUs and loop over AI research/engineering problems; founded by former Anthropic researchers.",
+      "round": {
+        "type": "Seed",
+        "amountM": 200,
+        "currency": "$",
+        "date": "2026-06-24",
+        "leads": [
+          "Andreessen Horowitz",
+          "Kleiner Perkins"
+        ],
+        "investors": [
+          "Andreessen Horowitz",
+          "Kleiner Perkins",
+          "Nvidia"
+        ],
+        "newsUrl": "https://www.unite.ai/former-anthropic-researchers-launch-mirendil-at-1-billion-valuation-with-200-m-seed-round/",
+        "note": "$1B valuation, one of AI's largest-ever seed rounds. a16z and Kleiner Perkins (both top-tier) co-led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://mirendil.com/careers.html"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Stark",
+      "domain": "stark-defence.com",
+      "location": "Berlin, Germany",
+      "description": "European defense-tech startup building unmanned systems and loitering munitions for NATO allies and partner militaries, including Ukraine.",
+      "round": {
+        "type": "Growth",
+        "amountM": 500,
+        "currency": "€",
+        "date": "2026-06-23",
+        "leads": [
+          "Founders Fund",
+          "Sequoia Capital"
+        ],
+        "investors": [
+          "Founders Fund",
+          "Sequoia Capital"
+        ],
+        "newsUrl": "https://www.bloomberg.com/news/articles/2026-06-23/sequoia-founders-fund-back-german-drone-startup-stark-at-3-5-billion-valuation",
+        "note": "~$569M USD equiv.; €3.5B+ valuation. Founders Fund and Sequoia Capital (both top-tier) co-led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://stark-defence.com/en/career"
+      }
+    },
+    {
+      "verified": false,
+      "name": "TwelveLabs",
+      "domain": "twelvelabs.io",
+      "location": "San Francisco, CA",
+      "description": "Full-stack agentic video intelligence system (Marengo embedding + Pegasus models) that makes vast video archives searchable and operable.",
+      "round": {
+        "type": "Series B",
+        "amountM": 100,
+        "currency": "$",
+        "date": "2026-07-01",
+        "leads": [
+          "NEA",
+          "NAVER Ventures"
+        ],
+        "investors": [
+          "NEA",
+          "NAVER Ventures",
+          "Amazon",
+          "Radical Ventures",
+          "Korea Investment Partners",
+          "Index Ventures",
+          "Quadrille Capital",
+          "Red Bull Ventures"
+        ],
+        "newsUrl": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+        "note": "NEA co-led (top-tier); Index Ventures also participating (top-tier). Total funding now $200M+."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.twelvelabs.io/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Norm AI",
+      "domain": "norm.ai",
+      "location": "New York, NY",
+      "description": "AI-native law firm platform ('Norm Law'); generative AI agents draft documents and handle legal/compliance tasks under attorney supervision. Clients hold $30T+ combined AUM.",
+      "round": {
+        "type": "Series C",
+        "amountM": 120,
+        "currency": "$",
+        "date": "2026-07-07",
+        "leads": [
+          "Khosla Ventures"
+        ],
+        "investors": [
+          "Khosla Ventures",
+          "Bain Capital Ventures",
+          "Blackstone",
+          "Coatue",
+          "Craft Ventures",
+          "Vanguard",
+          "TIAA",
+          "New York Life"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/07/venture-capital-startup-funding-roundup-july-7-2026/",
+        "note": "$1.2B valuation; total raised >$260M. Khosla Ventures led (top-tier); Coatue (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.norm.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Agave",
+      "domain": "useagave.com",
+      "location": "San Francisco, CA",
+      "description": "AI financial operations platform for construction: invoicing, expenses, compliance, billing across legacy ERP systems. 500+ customers, profitable 2+ years.",
+      "round": {
+        "type": "Series A",
+        "amountM": 15,
+        "currency": "$",
+        "date": "2026-07-07",
+        "leads": [
+          "Accel"
+        ],
+        "investors": [
+          "Accel",
+          "Y Combinator Continuity",
+          "Khosla Ventures",
+          "Nyca Partners",
+          "8VC"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/07/venture-capital-startup-funding-roundup-july-7-2026/",
+        "note": "Total raised >$20M. Accel led (top-tier); Y Combinator and Khosla (top-tier) participating."
+      },
+      "jobs": {
+        "total": 8,
+        "careersUrl": "https://useagave.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Jump",
+      "domain": "jumpapp.com",
+      "location": "Salt Lake City, UT",
+      "description": "AI assistant/orchestration platform for financial advisors; automates meeting notes, follow-ups and CRM updates. 27,000+ advisors using it.",
+      "round": {
+        "type": "Series B",
+        "amountM": 80,
+        "currency": "$",
+        "date": "2026-07-07",
+        "leads": [
+          "Insight Partners"
+        ],
+        "investors": [
+          "Insight Partners",
+          "F-Prime Capital",
+          "Allianz Life Ventures",
+          "TIAA Ventures",
+          "Peterson Partners",
+          "Battery Ventures",
+          "Citi Ventures"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/07/venture-capital-startup-funding-roundup-july-7-2026/",
+        "note": "Total raised $105M. Insight Partners led (top-tier); Battery Ventures (top-tier) existing investor."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://careers.jumpapp.com"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Prime Intellect",
+      "domain": "primeintellect.ai",
+      "location": "San Francisco, CA",
+      "description": "AI infrastructure enabling enterprises to train, deploy and continuously improve their own agentic models (the 'Open Superintelligence Stack'); customers incl. Ramp, Zapier. ~$100M ARR run-rate.",
+      "round": {
+        "type": "Series A",
+        "amountM": 130,
+        "currency": "$",
+        "date": "2026-07-08",
+        "leads": [
+          "Radical Ventures"
+        ],
+        "investors": [
+          "Radical Ventures",
+          "NVIDIA Ventures",
+          "Intel Capital",
+          "Dell Technologies Capital",
+          "ICONIQ"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/",
+        "note": "$1B valuation. ICONIQ (top-tier) participating; Radical Ventures led."
+      },
+      "jobs": {
+        "total": 29,
+        "careersUrl": "https://www.primeintellect.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Engram",
+      "domain": "engram.com",
+      "location": "San Francisco, CA",
+      "description": "'Learned memory' layer for enterprise AI that cuts token costs by mapping org-specific workflows and context; customers incl. Microsoft, Notion, Harvey. 13 employees.",
+      "round": {
+        "type": "Series A",
+        "amountM": 98,
+        "currency": "$",
+        "date": "2026-06-23",
+        "leads": [
+          "General Catalyst",
+          "Kleiner Perkins",
+          "Sequoia Capital"
+        ],
+        "investors": [
+          "General Catalyst",
+          "Kleiner Perkins",
+          "Sequoia Capital",
+          "Factory",
+          "Modern",
+          "Amplify Partners",
+          "Neo"
+        ],
+        "newsUrl": "https://techstartups.com/2026/06/23/engram-raises-98-million-to-help-companies-lower-ai-token-costs-with-smarter-memory-models/",
+        "note": "$600M valuation. General Catalyst, Kleiner Perkins, Sequoia Capital all top-tier and co-led. Emerged from stealth; not previously in tracker."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.engram.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Oratomic",
+      "domain": "oratomic.com",
+      "location": "Pasadena, CA",
+      "description": "Neutral-atom fault-tolerant quantum computing; Caltech/Harvard spinout targeting utility-scale quantum computers with ~10,000 qubits.",
+      "round": {
+        "type": "Series A",
+        "amountM": 300,
+        "currency": "$",
+        "date": "2026-07-07",
+        "leads": [
+          "ARCH Venture Partners",
+          "Spark Capital",
+          "Khosla Ventures"
+        ],
+        "investors": [
+          "ARCH Venture Partners",
+          "Spark Capital",
+          "Khosla Ventures",
+          "Bezos Expeditions",
+          "Index Ventures",
+          "General Catalyst",
+          "Bain Capital",
+          "Lowercarbon"
+        ],
+        "newsUrl": "https://siliconangle.com/2026/07/08/quantum-startup-oratomic-banks-300m-race-straight-fault-tolerance/",
+        "note": "One of the largest-ever initial VC investments in a quantum company. Khosla Ventures, Index Ventures, General Catalyst all top-tier and co-lead/participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.oratomic.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Ollama",
+      "domain": "ollama.com",
+      "location": "Palo Alto, CA",
+      "description": "Open-source platform for running large language models locally or in the cloud; 8.9M monthly active developers, 67,000+ community-built integrations.",
+      "round": {
+        "type": "Series B",
+        "amountM": 65,
+        "currency": "$",
+        "date": "2026-07-09",
+        "leads": [
+          "Theory Ventures"
+        ],
+        "investors": [
+          "Theory Ventures",
+          "Benchmark",
+          "8VC",
+          "Y Combinator",
+          "Pace Capital",
+          "49 Palms",
+          "GTMFund"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/09/popular-open-source-ai-developer-tool-ollama-raises-65m-grows-to-nearly-9m-users/",
+        "note": "Total raised $88M. Benchmark and Y Combinator (top-tier) participating; Theory Ventures led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://jobs.ashbyhq.com/ollama"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Helsing",
+      "domain": "helsing.ai",
+      "location": "Munich, Germany",
+      "description": "AI-native defense platform: real-time battlefield decision software, AI-enabled drones and sensor fusion for NATO militaries.",
+      "round": {
+        "type": "Series E",
+        "amountM": 1800,
+        "currency": "$",
+        "date": "2026-07-13",
+        "leads": [
+          "Dragoneer Investment Group"
+        ],
+        "investors": [
+          "Dragoneer Investment Group",
+          "Lightspeed Venture Partners",
+          "Disruptive",
+          "ICONIQ",
+          "Growth Equity at Goldman Sachs Alternatives",
+          "JPMorgan Chase",
+          "Canada Pension Plan Investment Board",
+          "General Catalyst",
+          "Plural",
+          "Stepstone"
+        ],
+        "newsUrl": "https://www.cnbc.com/2026/07/13/helsing-fund-raise-defense-18-billion.html",
+        "note": "$18B valuation; Europe's biggest-ever defense-tech round. Lightspeed, ICONIQ, General Catalyst (top-tier) participating."
+      },
+      "jobs": {
+        "total": 128,
+        "careersUrl": "https://helsing.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "SambaNova Systems",
+      "domain": "sambanova.ai",
+      "location": "Palo Alto, CA",
+      "description": "AI chip maker and enterprise inference infrastructure; SN40/SN50 systems for training and inference workloads.",
+      "round": {
+        "type": "Series F",
+        "amountM": 1000,
+        "currency": "$",
+        "date": "2026-07-08",
+        "leads": [
+          "General Atlantic"
+        ],
+        "investors": [
+          "General Atlantic",
+          "Battery Ventures",
+          "BlackRock",
+          "Capital Group",
+          "Intel Capital",
+          "Qatar Investment Authority",
+          "T. Rowe Price",
+          "Vista Equity Partners",
+          "Seligman Ventures",
+          "Assam Ventures",
+          "Cambium Capital"
+        ],
+        "newsUrl": "https://www.bloomberg.com/news/articles/2026-07-08/ai-chip-startup-sambanova-raises-funds-at-11-billion-valuation",
+        "note": "$11B valuation; first close of Series F, more investors expected in second close. Battery Ventures (top-tier) participating. JPMorgan Chase selected as inference partner."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://sambanova.ai/company/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Keyfactor",
+      "domain": "keyfactor.com",
+      "location": "Independence, OH",
+      "description": "Digital identity and machine identity management software; secures certificates, encryption keys and connected devices for 1,500+ enterprises.",
+      "round": {
+        "type": "Private Equity",
+        "amountM": 1000,
+        "currency": "$",
+        "date": "2026-07-06",
+        "leads": [
+          "Summit Partners"
+        ],
+        "investors": [
+          "Summit Partners",
+          "Insight Partners",
+          "Sixth Street Growth"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/keyfactor-announces-1b-strategic-growth-investment-led-by-summit-partners-to-expand-leadership-in-securing-the-ai-and-post-quantum-enterprise-302818036.html",
+        "note": "$1B+ strategic growth investment to expand into AI and post-quantum security. Insight Partners (top-tier) participating."
+      },
+      "jobs": {
+        "total": 5,
+        "careersUrl": "https://www.keyfactor.com/careers/"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Fireworks AI",
+      "domain": "fireworks.ai",
+      "location": "Redwood City, CA",
+      "description": "AI inference platform for specialized/fine-tuned models; serves 40T+ tokens/day across 20+ clouds. Customers incl. Doximity, Revolut, Shopify.",
+      "round": {
+        "type": "Series D",
+        "amountM": 1505,
+        "currency": "$",
+        "date": "2026-07-16",
+        "leads": [
+          "Atreides Management",
+          "Index Ventures",
+          "TCV"
+        ],
+        "investors": [
+          "Atreides Management",
+          "Index Ventures",
+          "TCV",
+          "Evantic Capital",
+          "Lightspeed Venture Partners",
+          "Nvidia",
+          "Bessemer Venture Partners",
+          "Menlo Ventures"
+        ],
+        "newsUrl": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+        "note": "$17.5B valuation. Index Ventures, Lightspeed, Bessemer, Menlo (all top-tier) participating/co-leading."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://fireworks.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Wonder",
+      "domain": "wonder.com",
+      "location": "New York, NY",
+      "description": "Mealtime platform combining chef-developed food concepts, delivery, dine-in and meal kits across 135+ food halls; founded by Marc Lore.",
+      "round": {
+        "type": "Series D",
+        "amountM": 650,
+        "currency": "$",
+        "date": "2026-07-16",
+        "leads": [
+          "Accel",
+          "GV",
+          "NEA"
+        ],
+        "investors": [
+          "Accel",
+          "GV",
+          "NEA",
+          "ARK Invest",
+          "AllianceBernstein",
+          "Kayne Anderson Rudnick"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/wonder-announces-650-million-series-d-round-at-a-9-billion-pre-money-valuation-302827208.html",
+        "note": "$9B pre-money valuation; total raised ~$3B since 2018. Accel, GV, NEA (all top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.wonder.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Sable",
+      "domain": "withsable.com",
+      "location": "San Francisco, CA",
+      "description": "AI 'employee' (Aidan) with real-time computer use, vision and voice; runs customer calls, demos and onboarding at scale. Live with Notion, Decagon.",
+      "round": {
+        "type": "Series A",
+        "amountM": 45,
+        "currency": "$",
+        "date": "2026-07-16",
+        "leads": [
+          "Sequoia Capital",
+          "8VC"
+        ],
+        "investors": [
+          "Sequoia Capital",
+          "8VC",
+          "BoxGroup",
+          "SV Angel",
+          "Valor Atreides AI Fund"
+        ],
+        "newsUrl": "https://fortune.com/2026/07/16/ai-employee-that-convinced-sequoia-to-invest-45-million-in-sable-shaun-maguire/",
+        "note": "Sequoia Capital (top-tier) co-led with 8VC. Less than a year old."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://withsable.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Fora",
+      "domain": "foratravel.com",
+      "location": "New York, NY",
+      "description": "Modern travel agency platform empowering entrepreneurs to become travel advisors; $3B+ in trips booked across 180+ countries.",
+      "round": {
+        "type": "Series D",
+        "amountM": 60,
+        "currency": "$",
+        "date": "2026-07-16",
+        "leads": [
+          "Forerunner Ventures",
+          "Tactile Ventures"
+        ],
+        "investors": [
+          "Forerunner Ventures",
+          "Tactile Ventures",
+          "Insight Partners",
+          "Thrive Capital",
+          "PLUS Capital",
+          "BlackPines Capital Partners",
+          "Tribeca Venture Partners"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/16/ai-powered-travel-agency-fora-hits-unicorn-status-raises-60m/",
+        "note": "$1B valuation (new unicorn). Forerunner, Insight Partners, Thrive Capital (all top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.foratravel.com/careers/jobs"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Senra Systems",
+      "domain": "senrasystems.us",
+      "location": "Redondo Beach, CA",
+      "description": "Software-driven wire harness manufacturing for aerospace, defense and space systems; building a third factory. Total raised >$112M.",
+      "round": {
+        "type": "Series B",
+        "amountM": 65,
+        "currency": "$",
+        "date": "2026-07-15",
+        "leads": [
+          "Lowercarbon Capital",
+          "Interlagos"
+        ],
+        "investors": [
+          "Lowercarbon Capital",
+          "Interlagos",
+          "General Catalyst",
+          "Sequoia Capital",
+          "Andreessen Horowitz",
+          "Founders Fund",
+          "Dylan Field",
+          "CIV",
+          "8VC",
+          "The Friedkin Group",
+          "Jaws Estates Capital",
+          "Sozo Ventures",
+          "Alumni Ventures"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html",
+        "note": "General Catalyst, Sequoia, a16z, Founders Fund (all top-tier) participating. Founded by SpaceX veterans."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.senrasystems.us/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Chai Discovery",
+      "domain": "chaidiscovery.com",
+      "location": "San Francisco, CA",
+      "description": "AI models for protein and antibody engineering and molecular design; signed first commercial contracts including a Novartis deal.",
+      "round": {
+        "type": "Series C",
+        "amountM": 400,
+        "currency": "$",
+        "date": "2026-07-14",
+        "leads": [
+          "Index Ventures"
+        ],
+        "investors": [
+          "Index Ventures",
+          "Kleiner Perkins",
+          "Sequoia Capital",
+          "Dimension",
+          "Bain Capital Ventures",
+          "Battery Ventures",
+          "Baillie Gifford",
+          "BDT & MSD Partners",
+          "Sapphire Ventures",
+          "Avra Capital",
+          "Thrive Capital",
+          "OpenAI",
+          "Oak HC/FT",
+          "Menlo Ventures",
+          "General Catalyst",
+          "Glade Brook Capital Partners",
+          "Avenir",
+          "Lachy Groom",
+          "Yosemite"
+        ],
+        "newsUrl": "https://endpoints.news/chai-discovery-gets-400m-tripling-valuation-from-seven-months-ago/",
+        "note": "$3.8B valuation, nearly tripling in under 8 months. Index Ventures led; Kleiner Perkins, Sequoia, Menlo, General Catalyst, Thrive Capital (all top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.chaidiscovery.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "TerraFirma",
+      "domain": "terrafirma.inc",
+      "location": "Austin, TX",
+      "description": "Remote-operated and semi-autonomous heavy construction equipment; founded by ex-SpaceX engineers targeting a 300-employee build-out.",
+      "round": {
+        "type": "Series A",
+        "amountM": 100,
+        "currency": "$",
+        "date": "2026-07-14",
+        "leads": [
+          "Kleiner Perkins"
+        ],
+        "investors": [
+          "Kleiner Perkins",
+          "Bain Capital Ventures",
+          "Glade Brook Capital Partners",
+          "Banner VC",
+          "Saga Ventures",
+          "Trust Ventures",
+          "Definition",
+          "Peak6",
+          "Magnetar Capital",
+          "Ravelin Capital"
+        ],
+        "newsUrl": "https://siliconangle.com/2026/07/14/construction-automation-startup-terrafirma-raises-115m/",
+        "note": "Total raised $115M. Kleiner Perkins (top-tier) led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.terrafirma-robotics.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Bunkerhill Health",
+      "domain": "bunkerhillhealth.com",
+      "location": "Palo Alto, CA",
+      "description": "AI agents (Carebricks) that let health systems build, share and deploy clinical and operational AI tools; live at Cleveland Clinic, UTMB, Intermountain.",
+      "round": {
+        "type": "Series B",
+        "amountM": 25,
+        "currency": "$",
+        "date": "2026-07-16",
+        "leads": [
+          "Khosla Ventures"
+        ],
+        "investors": [
+          "Khosla Ventures",
+          "Sequoia Capital",
+          "Felicis",
+          "Optum Ventures",
+          "Y Combinator"
+        ],
+        "newsUrl": "https://fortune.com/2026/07/16/bunkerhill-health-raises-55-million-ai-agents-work-inside-hospitals/",
+        "note": "Total raised $55M. Khosla Ventures led; Sequoia, Felicis, Y Combinator (all top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.bunkerhillhealth.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Regatta",
+      "domain": "regatta.dev",
+      "location": "Binyamina, Israel",
+      "description": "RegattaDB — a unified OLTP/OLAP/vector distributed SQL database built for AI agent systems; drop-in Postgres replacement.",
+      "round": {
+        "type": "Growth",
+        "amountM": 68,
+        "currency": "$",
+        "date": "2026-07-15",
+        "leads": [
+          "Lightspeed Venture Partners"
+        ],
+        "investors": [
+          "Lightspeed Venture Partners",
+          "83North",
+          "TPY Capital",
+          "Salesforce",
+          "Comcast",
+          "Amdocs"
+        ],
+        "newsUrl": "https://www.blocksandfiles.com/data-management/2026/07/15/regatta-launches-its-unified-oltp-olap-and-vector-database/",
+        "note": "Total raised $68M. Lightspeed Venture Partners (top-tier) led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://regatta.dev/join-us/"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Emergent",
+      "domain": "emergent.sh",
+      "location": "Pleasanton, CA / Bengaluru, India",
+      "description": "AI 'vibe coding' platform (multi-agent) that turns plain language into production-ready full-stack apps; 200,000+ paying customers.",
+      "round": {
+        "type": "Series C",
+        "amountM": 130,
+        "currency": "$",
+        "date": "2026-07-15",
+        "leads": [
+          "Creaegis"
+        ],
+        "investors": [
+          "Creaegis",
+          "Khosla Ventures",
+          "Lightspeed Venture Partners",
+          "SoftBank Vision Fund",
+          "Y Combinator",
+          "Claypond Capital",
+          "Sentinel Global"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/15/indian-ai-coding-startup-emergent-becomes-a-unicorn-just-over-a-year-after-launch/",
+        "note": "$1.5B valuation (new unicorn), 5x jump in 6 months. Khosla Ventures and Lightspeed (top-tier) existing backers participating; led by Creaegis."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://emergent.sh/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Nous Research",
+      "domain": "nousresearch.com",
+      "location": "New York, NY",
+      "description": "Open-source decentralized AI lab behind the Hermes agent and the Psyche distributed-training network.",
+      "round": {
+        "type": "Growth",
+        "amountM": 75,
+        "currency": "$",
+        "date": "2026-07-13",
+        "leads": [
+          "Robot Ventures"
+        ],
+        "investors": [
+          "Robot Ventures",
+          "Union Square Ventures",
+          "Paradigm",
+          "North Island Ventures",
+          "Delphi Ventures",
+          "OSS Capital"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/",
+        "note": "$1.5B valuation (reported/in talks). Robot Ventures led; Union Square Ventures (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://nousresearch.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "BRINC Drones",
+      "domain": "brincdrones.com",
+      "location": "Seattle, WA",
+      "description": "911 emergency-response drones for police and fire departments; aiming to put a drone on every US public-safety station roof.",
+      "round": {
+        "type": "Growth",
+        "amountM": 125,
+        "currency": "$",
+        "date": "2026-07-14",
+        "leads": [
+          "Motorola Solutions"
+        ],
+        "investors": [
+          "Motorola Solutions",
+          "Index Ventures",
+          "Dylan Field"
+        ],
+        "newsUrl": "https://www.geekwire.com/2026/motorola-leads-125m-round-for-brinc-fueling-911-drone-expansion-amid-u-s-import-crackdown/",
+        "note": "Total raised $280M+. Motorola Solutions led; Index Ventures (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://brincdrones.com/work-at-brinc/"
+      }
+    },
+    {
+      "verified": false,
+      "name": "InstaLILY",
+      "domain": "instalily.ai",
+      "location": "New York, NY",
+      "description": "Autonomous AI agents ('InstaWorkers') that automate sales, service and operations workflows for physical-goods businesses.",
+      "round": {
+        "type": "Series B",
+        "amountM": 60,
+        "currency": "$",
+        "date": "2026-07-14",
+        "leads": [
+          "Energize Capital"
+        ],
+        "investors": [
+          "Energize Capital",
+          "Insight Partners",
+          "Home Depot Ventures",
+          "United Rentals"
+        ],
+        "newsUrl": "https://siliconangle.com/2026/07/14/instalily-developer-ai-teammates-can-automate-complex-business-specific-work-raises-60m/",
+        "note": "Total raised ~$100M. Insight Partners (top-tier) participating; led by Energize Capital."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.instalily.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Feathery",
+      "domain": "feathery.io",
+      "location": "San Francisco, CA",
+      "description": "Agentic AI platform automating client onboarding, risk evaluation and data intake for insurance and wealth-management firms.",
+      "round": {
+        "type": "Series A",
+        "amountM": 30,
+        "currency": "$",
+        "date": "2026-07-14",
+        "leads": [
+          "Portage Ventures"
+        ],
+        "investors": [
+          "Portage Ventures",
+          "Index Ventures",
+          "Allstate Strategic Ventures",
+          "Clocktower Technology Ventures",
+          "Erie Strategic Ventures",
+          "Bain Capital Ventures"
+        ],
+        "newsUrl": "https://www.feathery.io/blog/feathery-raises-30m-to-scale-the-ai-operating-decisioning-system-for-financial-services",
+        "note": "Total raised $30M+. Index Ventures (top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.feathery.io/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Hadrius",
+      "domain": "hadrius.com",
+      "location": "New York, NY",
+      "description": "AI-native compliance platform automating regulatory surveillance and false-positive triage for financial firms.",
+      "round": {
+        "type": "Series A",
+        "amountM": 22,
+        "currency": "$",
+        "date": "2026-07-14",
+        "leads": [
+          "CRV"
+        ],
+        "investors": [
+          "CRV",
+          "Y Combinator",
+          "Pathlight Ventures"
+        ],
+        "newsUrl": "https://www.axios.com/pro/fintech-deals/2026/07/14/hadrius-22m-series-a-crv",
+        "note": "Total raised $27M. Y Combinator (top-tier) participating; led by CRV."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.hadrius.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Corner Health",
+      "domain": "cornerhealth.com",
+      "location": "Santa Monica, CA",
+      "description": "Platform giving nurse practitioners the billing, insurance and AI-powered workflow tools to run independent primary-care practices.",
+      "round": {
+        "type": "Series A",
+        "amountM": 25,
+        "currency": "$",
+        "date": "2026-07-13",
+        "leads": [
+          "Oak HC/FT"
+        ],
+        "investors": [
+          "Oak HC/FT",
+          "First Round Capital",
+          "Zigg Capital"
+        ],
+        "newsUrl": "https://fortune.com/2026/07/13/corner-health-nurse-practitioners-independent-practice-oak-series-a-funding/",
+        "note": "Total raised $32.5M. First Round Capital (top-tier) participating; led by Oak HC/FT."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.cornerhealth.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Walden Robotics",
+      "domain": "waldenrobotics.com",
+      "location": "Cambridge, MA",
+      "description": "Wheeled, two-armed semi-humanoid robots using Physical AI for manufacturing and logistics; spun out of Toyota Research Institute.",
+      "round": {
+        "type": "Seed",
+        "amountM": 300,
+        "currency": "$",
+        "date": "2026-07-15",
+        "leads": [
+          "Toyota",
+          "Deviation Capital"
+        ],
+        "investors": [
+          "Toyota",
+          "Deviation Capital",
+          "NVIDIA",
+          "Boeing",
+          "AE Ventures",
+          "Samsung Ventures",
+          "Prologis Ventures",
+          "CoreWeave Ventures",
+          "Calibrate Ventures",
+          "Colle Capital Partners",
+          "Shine Capital",
+          "NextView Ventures",
+          "Squarepoint Capital",
+          "One Madison Group",
+          "KAS Venture Partners",
+          "Menlo Ventures"
+        ],
+        "newsUrl": "https://www.bloomberg.com/news/articles/2026-07-15/toyota-backed-robotics-startup-walden-launches-with-1-1-billion-valuation",
+        "note": "$1.1B valuation seed round, one of the largest seed rounds ever. Menlo Ventures (top-tier) participating among many backers; co-led by Toyota and Deviation Capital."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.waldenrobotics.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Neo",
+      "domain": "neo.ai",
+      "location": "Boston, MA",
+      "description": "Agentic software control layer; inventories, assesses and enforces policy on AI agents, AI-enabled apps, browsers and identities across the enterprise. Founded by former SentinelOne leaders Nick Warner and Shlomi Salem.",
+      "round": {
+        "type": "Series A",
+        "amountM": 100,
+        "currency": "$",
+        "date": "2026-07-20",
+        "leads": [
+          "Andreessen Horowitz",
+          "Bessemer Venture Partners"
+        ],
+        "investors": [
+          "Andreessen Horowitz",
+          "Bessemer Venture Partners",
+          "Craft Ventures",
+          "Merlin Ventures"
+        ],
+        "newsUrl": "https://www.globenewswire.com/news-release/2026/07/20/3329638/0/en/Neo-Launches-with-100M-to-Secure-AI-Software-Across-the-Enterprise.html",
+        "note": "$75M Series A led by a16z + Bessemer (both top-tier), following a previously undisclosed $25M seed. Emerged from stealth."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.neo.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Natural",
+      "domain": "natural.co",
+      "location": "United States",
+      "description": "Payments infrastructure for AI agents; agentic checkout and dispute handling, positioning against Stripe. Founders ex-Stripe/Method.",
+      "round": {
+        "type": "Series A",
+        "amountM": 30,
+        "currency": "$",
+        "date": "2026-07-20",
+        "leads": [
+          "Forerunner Ventures"
+        ],
+        "investors": [
+          "Forerunner Ventures",
+          "Human Capital",
+          "Abstract",
+          "Bridge",
+          "Brex",
+          "Mercury"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/20/natural-raises-30m-to-reinvent-payments-for-ai-agents-and-take-on-stripe/",
+        "note": "Forerunner (top-tier) led. Total raised >$40M; company is 193 days old."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.natural.co/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Sila",
+      "domain": "silanano.com",
+      "location": "Alameda, CA",
+      "description": "Silicon-carbon anode materials for batteries; gigascale manufacturing in Moses Lake, WA serving EVs, drones, defense and AI infrastructure.",
+      "round": {
+        "type": "Private equity/growth",
+        "amountM": 300,
+        "currency": "$",
+        "date": "2026-07-21",
+        "leads": [
+          "Atreides Management",
+          "Sutter Hill Ventures"
+        ],
+        "investors": [
+          "Atreides Management",
+          "Sutter Hill Ventures",
+          "8VC",
+          "Bessemer Venture Partners",
+          "Matrix Partners",
+          "T. Rowe Price-advised funds"
+        ],
+        "newsUrl": "https://www.businesswire.com/news/home/20260721561478/en/Sila-Secures-%24300-Million-in-Private-Funding-to-Ramp-Gigascale-Anode-Manufacturing-and-Strengthen-Americas-Technology-Sovereignty",
+        "note": "Bessemer Venture Partners (top-tier) participating; total raised ~$1.6B."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.silanano.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Gritt",
+      "domain": "gritt.ai",
+      "location": "Belmont, CA",
+      "description": "Physical AI robotics that bolt onto existing construction equipment to automate utility-scale solar plant installation.",
+      "round": {
+        "type": "Series A",
+        "amountM": 26,
+        "currency": "$",
+        "date": "2026-07-21",
+        "leads": [
+          "Obvious Ventures"
+        ],
+        "investors": [
+          "Obvious Ventures",
+          "Union Square Ventures",
+          "Active Impact Investment",
+          "First Round Capital",
+          "Climactic",
+          "Congruent Ventures",
+          "VSC Ventures"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/21/gritt-exits-stealth-with-34-million-for-robots-to-build-solar-plants-then-everything-else/",
+        "note": "Union Square Ventures and First Round Capital (both top-tier) participating; total raised $32M."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://jobs.ashbyhq.com/gritt.ai"
+      }
+    },
+    {
+      "verified": false,
+      "name": "SkyPilot",
+      "domain": "skypilot.ai",
+      "location": "San Francisco, CA",
+      "description": "Unified AI compute platform managing GPU fleets across hyperscalers, neoclouds and Kubernetes for frontier AI teams; built on the open-source SkyPilot project (14M+ downloads).",
+      "round": {
+        "type": "Seed",
+        "amountM": 20,
+        "currency": "$",
+        "date": "2026-07-21",
+        "leads": [
+          "Lux Capital"
+        ],
+        "investors": [
+          "Lux Capital",
+          "Amplify Partners",
+          "Coatue Management",
+          "Foundation Capital",
+          "Race Capital",
+          "The House Fund"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/skypilot-launches-with-20m-to-accelerate-custom-intelligence-for-frontier-ai-teams-302830808.html",
+        "note": "Coatue Management (top-tier) participating. Founded by Databricks co-founder Ion Stoica and UC Berkeley researchers."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://skypilot.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Glow",
+      "domain": "glow.io",
+      "location": "Palo Alto, CA / Tel Aviv, Israel",
+      "description": "AI-era endpoint security platform; policy and orchestration layer governing software, agents and package installs on employee devices. Founded by ex-Meta/Snowflake/Claroty execs.",
+      "employees": 100,
+      "round": {
+        "type": "Series A",
+        "amountM": 180,
+        "currency": "$",
+        "date": "2026-07-22",
+        "leads": [
+          "Sequoia Capital"
+        ],
+        "investors": [
+          "Sequoia Capital",
+          "Cyberstarts",
+          "Greenoaks",
+          "Redpoint Ventures",
+          "Index Ventures",
+          "Swish Ventures",
+          "Lux Capital",
+          "Operator Collective",
+          "Holly Ventures"
+        ],
+        "newsUrl": "https://www.globenewswire.com/news-release/2026/07/22/3331154/0/en/glow-emerges-from-stealth-with-180-million-to-reinvent-endpoint-security-in-the-ai-era.html",
+        "note": "$1.2B valuation; emerged from stealth. Sequoia, Redpoint Ventures, Index Ventures (all top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.glow.io/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Cathedral",
+      "domain": "unconfirmed",
+      "location": "United States (HQ not publicly disclosed)",
+      "description": "AI-driven military cyber operations startup (offensive and defensive), founded by former Department of Government Efficiency staffers; exploring dedicated compute via data-center deal.",
+      "round": {
+        "type": "Not publicly disclosed",
+        "amountM": 160,
+        "currency": "$",
+        "date": "2026-07-22",
+        "leads": [
+          "Andreessen Horowitz",
+          "Sequoia Capital"
+        ],
+        "investors": [
+          "Andreessen Horowitz",
+          "Sequoia Capital"
+        ],
+        "newsUrl": "https://www.reuters.com/technology/doge-alumni-launch-military-cyber-startup-with-14-billion-valuation-2026-07-22/",
+        "note": "$1.4B valuation. a16z and Sequoia (both top-tier) led and took board seats. Company is deliberately low-profile; no public website/careers page found as of 2026-07-23 — domain and careers URL unconfirmed."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": null
+      }
+    },
+    {
+      "verified": false,
+      "name": "Candid Health",
+      "domain": "candidhealth.com",
+      "location": "San Francisco, CA",
+      "description": "Autonomous revenue cycle management software for healthcare providers, automating billing and reimbursement workflows.",
+      "employees": 125,
+      "round": {
+        "type": "Series D",
+        "amountM": 120,
+        "currency": "$",
+        "date": "2026-07-22",
+        "leads": [
+          "Sixth Street Growth"
+        ],
+        "investors": [
+          "Sixth Street Growth",
+          "Oak HC/FT",
+          "8VC",
+          "Y Combinator"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/22/venture-capital-startup-funding-roundup-july-22-2026-andreessen-horowitz-redpoint-ventures-sequoia-capital-insight-partners-more/",
+        "note": "Total raised $219.5M; triples valuation vs Feb 2025 Series C. Y Combinator (top-tier) participating."
+      },
+      "jobs": {
+        "total": 11,
+        "careersUrl": "https://candidhealth.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Passionfroot",
+      "domain": "passionfroot.me",
+      "location": "Berlin, Germany (expanding to New York, NY)",
+      "description": "Marketplace and workflow layer connecting B2B creators (newsletter writers, podcasters, experts) with brands; customers incl. ElevenLabs, Figma, Replit, Framer, Gamma.",
+      "employees": 15,
+      "round": {
+        "type": "Series A",
+        "amountM": 15,
+        "currency": "$",
+        "date": "2026-07-22",
+        "leads": [
+          "Insight Partners"
+        ],
+        "investors": [
+          "Insight Partners",
+          "Creandum",
+          "Supernode Global",
+          "s16vc"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/22/passionfroot-raises-15m-to-expand-its-b2b-creator-marketplace-to-the-us/",
+        "note": "Total raised >$21M; revenue grew 13x YoY, profitable. Insight Partners (top-tier) led; relocating HQ to NYC."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://jobs.ashbyhq.com/passionfroot"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Etched",
+      "domain": "etched.com",
+      "location": "San Jose, CA",
+      "description": "AI chip startup building Sohu, a transformer-specific inference chip; already booked $1B in orders and manufactured its first chips.",
+      "round": {
+        "type": "Series C",
+        "amountM": 300,
+        "currency": "$",
+        "date": "2026-07-23",
+        "leads": [
+          "Sequoia"
+        ],
+        "investors": [
+          "Sequoia",
+          "Andreessen Horowitz",
+          "Jane Street",
+          "Diffusion",
+          "SK hynix"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/23/etched-ai-chip-startup-founded-by-college-dropouts-raises-300m-at-10-3b-valuation-to-take-on-nvidia/",
+        "note": "$10.3B valuation. Sequoia led; Andreessen Horowitz (both top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://jobs.ashbyhq.com/Etched"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Paper",
+      "domain": "paper.design",
+      "location": "San Francisco, CA",
+      "description": "AI-era design platform (design-engineering layer) that renders with HTML/CSS for agentic coding workflows; customers incl. Ramp, Lovable, Vercel, PostHog.",
+      "round": {
+        "type": "Series A",
+        "amountM": 34,
+        "currency": "$",
+        "date": "2026-07-23",
+        "leads": [
+          "Accel",
+          "ICONIQ"
+        ],
+        "investors": [
+          "Accel",
+          "ICONIQ",
+          "Designer Fund"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/23/venture-capital-startup-funding-roundup-july-23-2026-accel-andreessen-horowitz-battery-ventures-iconiq-jane-street-sequoia-more/",
+        "note": "Accel and ICONIQ (both top-tier) co-led. ARR grew 25x since early-2026 launch of Paper Desktop."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://paper.design/blog/design-engineer"
+      }
+    },
+    {
+      "verified": false,
+      "name": "AegisAI",
+      "domain": "aegisai.ai",
+      "location": "San Francisco, CA",
+      "description": "Agentic AI email security platform stopping AI-generated phishing/BEC; founded by former Google security leads (Gmail, Chrome Security).",
+      "round": {
+        "type": "Series A",
+        "amountM": 36,
+        "currency": "$",
+        "date": "2026-07-23",
+        "leads": [
+          "Battery Ventures"
+        ],
+        "investors": [
+          "Battery Ventures",
+          "Accel",
+          "Foundation Capital"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/23/venture-capital-startup-funding-roundup-july-23-2026-accel-andreessen-horowitz-battery-ventures-iconiq-jane-street-sequoia-more/",
+        "note": "Total raised $49M. Battery Ventures led; Accel (both top-tier) participating."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.aegisai.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Atoms",
+      "domain": "atoms.co",
+      "location": "Los Angeles, CA",
+      "description": "Industrial AI/robotics platform combining software, sensors and robots to automate food, mining and transportation industries; grew out of Travis Kalanick's City Storage Systems (CloudKitchens) and the Pronto robotics acquisition.",
+      "round": {
+        "type": "Growth",
+        "amountM": 1700,
+        "currency": "$",
+        "date": "2026-07-22",
+        "leads": [
+          "Andreessen Horowitz"
+        ],
+        "investors": [
+          "Andreessen Horowitz",
+          "Bain Capital Ventures",
+          "Uber",
+          "Fifth Wall",
+          "A*",
+          "Chemistry",
+          "K5 Global",
+          "Abstract",
+          "SV Angel",
+          "Alpha Square Group"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/",
+        "note": "Andreessen Horowitz (top-tier) led; Ben Horowitz joins board. Company hiring 200+ roles incl. many 0-3 yr entry-level positions."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://atoms.co/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Meshy AI",
+      "domain": "meshy.ai",
+      "location": "Silicon Valley, CA",
+      "description": "AI 3D model generator (Text/Image to 3D, texturing, animation); 12M+ users, 100M+ models created, ARR growing ~12x YoY.",
+      "round": {
+        "type": "Series B",
+        "amountM": 396,
+        "currency": "$",
+        "date": "2026-07-21",
+        "leads": [
+          "IDG Capital",
+          "Matrix Partners China",
+          "Monolith Management"
+        ],
+        "investors": [
+          "IDG Capital",
+          "Matrix Partners China",
+          "Monolith Management",
+          "Granite Asia",
+          "Sequoia China",
+          "BAI Capital",
+          "Source Code Capital"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/meshy-raises-nearly-400-million-at-a-1-5-billion-valuation-the-largest-round-to-date-in-ai-3d-302828384.html",
+        "note": "$1.5B valuation, largest-ever AI 3D funding round. Sequoia China (existing investor, oversubscribed allocation) is a partial top-tier match via 'Sequoia' — note this is the independent China-focused entity (formerly Sequoia Capital China, renamed HongShan in 2023), not Sequoia Capital US."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.meshy.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Enigma",
+      "domain": "robots.online",
+      "location": "San Francisco, CA",
+      "description": "Physical AI startup building robot-agnostic foundation models plus human-robot interfaces; launched robots.online with 100+ real interactive robots. Founded by Jonathan Jacobi (ex-Microsoft, Wiz) and Gal Niv.",
+      "round": {
+        "type": "Seed",
+        "amountM": 71,
+        "currency": "$",
+        "date": "2026-07-27",
+        "leads": [
+          "Index Ventures",
+          "Ribbit Capital"
+        ],
+        "investors": [
+          "Index Ventures",
+          "Ribbit Capital",
+          "Conviction"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/27/enigma-raises-70m-to-make-controlling-a-robot-as-easy-as-adjusting-the-volume/",
+        "note": "Index Ventures (top-tier) co-led with Ribbit; angels from OpenAI, Anthropic, DeepMind, xAI, Cognition, Wiz. Corporate domain unconfirmed; robots.online is the public product."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.robots.online"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Act Security",
+      "domain": "act.security",
+      "location": "Tel Aviv, Israel",
+      "description": "Action-centric cloud security platform; deterministic access boundaries for humans, workloads and AI agents. Founders previously built Medigate (acquired by Claroty for $400M).",
+      "round": {
+        "type": "Seed + Series A",
+        "amountM": 60,
+        "currency": "$",
+        "date": "2026-07-28",
+        "leads": [
+          "Notable Capital"
+        ],
+        "investors": [
+          "Notable Capital",
+          "Team8",
+          "Bessemer Venture Partners",
+          "Hetz Ventures",
+          "Claltech",
+          "Startpoint Capital",
+          "SVCI"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/act-security-launches-action-centric-cloud-security-platform-with-60-million-in-funding-302836148.html",
+        "note": "Emerged from stealth with $60M across seed + Series A. Bessemer (top-tier) backed the seed; Notable Capital led the Series A."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://act.security/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Hush Security",
+      "domain": "hush.security",
+      "location": "Tel Aviv, Israel / US",
+      "description": "Unified access management for non-human identities and AI agents: secretless, just-in-time permissions, central registry, kill switch. Founders ex-Meta Networks (acquired by Proofpoint).",
+      "round": {
+        "type": "Series A",
+        "amountM": 30,
+        "currency": "$",
+        "date": "2026-07-28",
+        "leads": [
+          "Battery Ventures"
+        ],
+        "investors": [
+          "Battery Ventures",
+          "YL Ventures",
+          "Akamai Technologies"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/hush-security-raises-30m-to-close-the-ai-agent-governance-gap-with-akamai-joining-as-strategic-investor-302836307.html",
+        "note": "Battery Ventures (top-tier) led; Akamai joined as strategic investor. Total raised $41M. Kyndryl deploys and resells the platform."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.hush.security/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Array Labs",
+      "domain": "arraylabs.io",
+      "location": "Redwood City, CA",
+      "description": "Radar-imaging satellite constellations (formation-flying, multistatic) for high-resolution 3D intelligence through clouds and at night; R&D contracts with DARPA, U.S. Navy and Air Force.",
+      "round": {
+        "type": "Strategic",
+        "amountM": 21,
+        "currency": "$",
+        "date": "2026-07-28",
+        "leads": [
+          "Mitsubishi Electric"
+        ],
+        "investors": [
+          "Mitsubishi Electric",
+          "Catapult Ventures",
+          "Kompas VC",
+          "Y Combinator"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/28/venture-capital-startup-funding-roundup-july-28-2026-battery-ventures-bessemer-gradient-team8-y-combinator-more/",
+        "note": "Oversubscribed strategic round anchored by Mitsubishi Electric (incl. APAC go-to-market partnership). Y Combinator (top-tier) participating. Total raised ~$56M."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://arraylabs.io/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Freehand",
+      "domain": "freehand.ai",
+      "location": "San Francisco, CA",
+      "description": "Autonomous AI agents managing Fortune 500 supply-chain spend: procurement, supplier negotiation, invoice checks, payments and ERP reconciliation. Deployed at Meta, Unilever, J&J, Pfizer, Dunkin', Cardinal Health.",
+      "round": {
+        "type": "Series B",
+        "amountM": 75,
+        "currency": "$",
+        "date": "2026-07-29",
+        "leads": [
+          "Battery Ventures",
+          "NewRoad Capital Partners"
+        ],
+        "investors": [
+          "Battery Ventures",
+          "NewRoad Capital Partners",
+          "PSP Growth",
+          "Nexus Venture Partners"
+        ],
+        "newsUrl": "https://www.freehand.ai/press-release/freehand-raises-75m-to-scale-ai-teams-managing-supply-chain-spend-for-fortune-500-companies",
+        "note": "Battery Ventures (top-tier) co-led. Total raised $100M; emerged from stealth."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.freehand.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Terminal",
+      "domain": "withterminal.com",
+      "location": "Toronto, ON, Canada",
+      "description": "Unified telematics API normalizing fleet data from 325+ telematics providers for insurers, fleet management and logistics; GPS, safety events, fault codes, dashcam media.",
+      "round": {
+        "type": "Series A",
+        "amountM": 20,
+        "currency": "$",
+        "date": "2026-07-29",
+        "leads": [
+          "Battery Ventures"
+        ],
+        "investors": [
+          "Battery Ventures",
+          "Intact Private Capital",
+          "Penske",
+          "Y Combinator",
+          "Wayfinder Ventures"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/terminal-raises-20-million-to-scale-market-leading-telematics-integration-technology-for-fortune-500-companies-across-insurance-fleet-management-and-logistics-302837250.html",
+        "note": "Battery Ventures (top-tier) led; Y Combinator (top-tier) returning. Total raised $26M."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.withterminal.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Henry AI",
+      "domain": "henry.ai",
+      "location": "New York, NY",
+      "description": "AI automating commercial real estate deal production - offering memorandums, underwriting, pitch decks, transaction summaries; 150+ CRE firms, 20,000+ deliverables covering $150B+ in deal value.",
+      "round": {
+        "type": "Series A",
+        "amountM": 16.5,
+        "currency": "$",
+        "date": "2026-07-29",
+        "leads": [
+          "FirstMark Capital"
+        ],
+        "investors": [
+          "FirstMark Capital",
+          "Thomson Reuters Ventures",
+          "Y Combinator",
+          "Susa Ventures",
+          "1Sharpe",
+          "StoryHouse Ventures",
+          "Pioneer Fund",
+          "RXR Arden Digital Ventures",
+          "Karman Ventures",
+          "Coalition Operators"
+        ],
+        "newsUrl": "https://www.prnewswire.com/news-releases/henry-ai-raises-16-5m-series-a-and-launches-henry-deal-302837784.html",
+        "note": "FirstMark led; Y Combinator (top-tier) follow-on. Launched Henry Deal."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.henry.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Centralize",
+      "domain": "usecentralize.com",
+      "location": "San Francisco, CA",
+      "description": "Relationship intelligence for enterprise revenue teams: live stakeholder maps built from email, calendar, CRM and call data; used at CoreWeave, Cognition, Brex, Webflow.",
+      "round": {
+        "type": "Series A",
+        "amountM": 15,
+        "currency": "$",
+        "date": "2026-07-29",
+        "leads": [
+          "NEA"
+        ],
+        "investors": [
+          "NEA",
+          "Salesforce Ventures",
+          "Y Combinator",
+          "20Sales",
+          "Ritual Capital",
+          "Adverb Ventures",
+          "Stewart Butterfield",
+          "Scott Woody"
+        ],
+        "newsUrl": "https://www.businesswire.com/news/home/20260729724558/en/Centralize-Raises-$19M-Led-by-NEA-to-Bring-Relationship-Intelligence-to-the-Core-of-Enterprise-Sales",
+        "note": "NEA led (top-tier); Y Combinator (top-tier) participating. $19M total funding."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.ycombinator.com/companies/centralize/jobs"
+      }
+    },
+    {
+      "verified": false,
+      "name": "K2 Space",
+      "domain": "k2space.com",
+      "location": "Torrance, CA",
+      "description": "LEO satellite manufacturer building very large (800kg+) high-power satellites; targeting production of up to 100 large satellites/year.",
+      "round": {
+        "type": "Series D",
+        "amountM": 500,
+        "currency": "$",
+        "date": "2026-07-30",
+        "leads": [
+          "Kleiner Perkins",
+          "ICONIQ"
+        ],
+        "investors": [
+          "Kleiner Perkins",
+          "ICONIQ",
+          "CapitalG",
+          "Lightspeed",
+          "ARK Invest"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/30/venture-capital-startup-funding-roundup-july-30-2026-bessemer-venture-partners-eli-lilly-co-g2-venture-partners-iconiq-growth-kleiner-perkins-lightspeed-more/",
+        "note": "$6.8B valuation. Kleiner Perkins + ICONIQ co-led; Lightspeed participating (all top-tier)."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.k2space.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Antora Energy",
+      "domain": "antora.com",
+      "location": "San Jose, CA",
+      "description": "Thermal batteries storing electricity as heat in carbon blocks for data centers, steel mills and industry; 5 GWh South Dakota facility.",
+      "round": {
+        "type": "Series C",
+        "amountM": 550,
+        "currency": "$",
+        "date": "2026-07-30",
+        "leads": [
+          "G2 Venture Partners",
+          "Eclipse Ventures"
+        ],
+        "investors": [
+          "G2 Venture Partners",
+          "Eclipse Ventures",
+          "Decarbonization Partners",
+          "Lowercarbon Capital",
+          "Breakthrough Energy Ventures",
+          "Kleiner Perkins",
+          "Ribbit Capital"
+        ],
+        "newsUrl": "https://www.antora.com/insights/series-c",
+        "note": "Total raised $770M. Kleiner Perkins (top-tier) participating; G2/Eclipse co-led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.antora.com/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Onyx Security",
+      "domain": "onyx.security",
+      "location": "New York, NY / Tel Aviv, Israel",
+      "description": "AI control company; real-time monitoring and governance of autonomous AI agents across enterprise systems. Revenue 4x since stealth exit 4 months ago.",
+      "round": {
+        "type": "Series B",
+        "amountM": 113,
+        "currency": "$",
+        "date": "2026-07-29",
+        "leads": [
+          "Bessemer Venture Partners"
+        ],
+        "investors": [
+          "Bessemer Venture Partners",
+          "Cyberstarts",
+          "TCV",
+          "Conviction",
+          "FirstMark",
+          "Vintage",
+          "QuantumLight",
+          "G Squared"
+        ],
+        "newsUrl": "https://www.businesswire.com/news/home/20260729713522/en/Onyx-Security-Raises-$113M-Series-B-to-Control-Advanced-AI-Quadrupling-Revenue-since-Stealth-Launch-Four-Months-Ago",
+        "note": "$640M valuation; total raised $153M. Bessemer (top-tier) led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://www.onyx.security/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "DataBahn",
+      "domain": "databahn.ai",
+      "location": "Dallas, TX",
+      "description": "Agentic data control plane for enterprise AI; automates data ingestion, tagging, routing and cost management across cloud data stores.",
+      "round": {
+        "type": "Series B",
+        "amountM": 40,
+        "currency": "$",
+        "date": "2026-07-30",
+        "leads": [
+          "Insight Partners"
+        ],
+        "investors": [
+          "Insight Partners",
+          "ForgePoint Capital",
+          "S3 Ventures",
+          "GTMfund",
+          "Gaingels"
+        ],
+        "newsUrl": "https://techstartups.com/2026/07/30/ai-infrastructure-startup-databahn-raises-40m-series-b-to-build-agentic-data-control-plane-for-enterprise-ai/",
+        "note": "Total raised $57.4M. Insight Partners (top-tier) led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://databahn.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Intropy",
+      "domain": "intropy.ai",
+      "location": "London, UK",
+      "description": "AI-native operating system for the spare parts supply chain; demand prediction, inventory, obsolescence and dynamic pricing. Hiring in London and New York.",
+      "round": {
+        "type": "Seed",
+        "amountM": 11,
+        "currency": "$",
+        "date": "2026-07-30",
+        "leads": [
+          "Felix Capital"
+        ],
+        "investors": [
+          "Felix Capital",
+          "Quiet Capital",
+          "General Catalyst",
+          "Firstminute Capital"
+        ],
+        "newsUrl": "https://venturebeat.com/business/intropy-announces-11-million-in-funding-to-build-the-ai-native-operating-system-for-the-spare-parts-supply-chain",
+        "note": "General Catalyst (top-tier) participating (existing investor). Felix Capital led."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": "https://intropy.ai/careers"
+      }
+    },
+    {
+      "verified": false,
+      "name": "Ellis",
+      "domain": "unconfirmed",
+      "location": "New York, NY",
+      "description": "AI-native operations platform for private credit managers; AI agents centralize documents, accounting data and correspondence. Founded by Cadre co-founder Ryan Williams.",
+      "round": {
+        "type": "Seed",
+        "amountM": 10,
+        "currency": "$",
+        "date": "2026-07-30",
+        "leads": [
+          "First Round Capital"
+        ],
+        "investors": [
+          "First Round Capital",
+          "645 Ventures",
+          "Harlem Capital",
+          "Khosla Ventures",
+          "Slow Ventures",
+          "Josh Kushner (Thrive)",
+          "Mellody Hobson",
+          "Immad Akhund"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/31/repeat-founder-ryan-williams-raises-10m-seed-for-an-ai-startup-for-private-credit-managers/",
+        "note": "First Round (top-tier) led; Khosla Ventures participating. Domain unconfirmed pending verification."
+      },
+      "jobs": {
+        "total": null,
+        "careersUrl": null
+      }
+    },
+    {
+      "verified": false,
+      "name": "Simile",
+      "domain": "simile.com",
+      "location": "San Francisco, CA",
+      "description": "Simulated 'synthetic users' for market & product research; AI personas built on Stanford Generative Agents work (founder Joon Sung Park). Customers incl. CVS, Gallup, Wealthfront, Suntory.",
+      "round": {
+        "type": "Series B",
+        "amountM": 200,
+        "currency": "$",
+        "date": "2026-07-30",
+        "leads": [
+          "Greenoaks"
+        ],
+        "investors": [
+          "Greenoaks",
+          "Index Ventures",
+          "Hanabi Capital",
+          "Bain Capital Ventures",
+          "A*",
+          "Factory",
+          "Definition",
+          "CVS Health Ventures"
+        ],
+        "newsUrl": "https://techcrunch.com/2026/07/30/synthetic-user-startup-simile-raises-200m-at-2b-valuation-5-months-after-100m-series-a/",
+        "note": "$2B valuation, 5 months after $100M Series A led by Index Ventures (top-tier, participating again). Greenoaks led."
+      },
+      "jobs": {
+        "total": 7,
+        "careersUrl": "https://jobs.ashbyhq.com/simile"
+      }
+    }
+  ]
+}
