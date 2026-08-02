@@ -1,0 +1,210 @@
+function freshFirmMatch(firm){
+  const f=firm.toLowerCase();
+  return FRESHFUNDS.find(x=>f.includes(x.firm.toLowerCase())||x.aliases.some(a=>f.includes(a.toLowerCase())));
+}
+
+const JOBS_TOOL = "mcp__b8b33260-7ae7-489b-9945-fb062ba299a1__apollo_organizations_job_postings";
+
+function getVCs(){ try{ const s=localStorage.getItem("tierVCs"); if(s) return JSON.parse(s);}catch(e){} return DEFAULT_VCS.slice(); }
+function setVCs(list){ try{ localStorage.setItem("tierVCs", JSON.stringify(list)); }catch(e){} }
+function isTier(inv, vcs){ const l=inv.toLowerCase(); return vcs.some(v=>l.includes(v.toLowerCase())); }
+function hasTierLead(c, vcs){ return c.round.leads.some(l=>isTier(l,vcs)); }
+function fmtAmt(c){ return c.round.cur + (c.round.amountM>=1000 ? (c.round.amountM/1000).toFixed(1)+"B" : c.round.amountM+"M"); }
+function fmtDate(d){ return new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); }
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+function cid(c){ return c.apolloId || c.domain.replace(/[^a-z0-9]/gi,""); }
+
+function switchTab(t){
+  document.getElementById("tab-startups").style.display = t==="startups"?"":"none";
+  document.getElementById("tab-vcjobs").style.display = t==="vcjobs"?"":"none";
+  document.getElementById("tab-funds").style.display = t==="funds"?"":"none";
+  document.getElementById("tabBtnStartups").classList.toggle("active",t==="startups");
+  document.getElementById("tabBtnVcjobs").classList.toggle("active",t==="vcjobs");
+  document.getElementById("tabBtnFunds").classList.toggle("active",t==="funds");
+  try{ localStorage.setItem("activeTab",t); }catch(e){}
+}
+
+function renderFunds(){
+  const rows=FRESHFUNDS.slice().sort((a,b)=>b.date.localeCompare(a.date));
+  document.getElementById("ffCount").textContent=rows.length;
+  const tot=rows.filter(f=>f.status!=="raising").reduce((s,f)=>s+f.sizeB,0);
+  document.getElementById("ffTotal").textContent="$"+tot.toFixed(1)+"B";
+  document.getElementById("ffHiring").textContent=rows.filter(f=>f.status==="hiring"||f.status==="program").length;
+  const labels={hiring:"Hiring now",program:"Fellows / program",none:"No openings listed",raising:"Raising (reported)"};
+  document.getElementById("fundrows").innerHTML=rows.map(f=>`
+    <div class="fundrow">
+      <div class="fname"><a href="${f.careers}" target="_blank" rel="noopener">${esc(f.firm)}</a></div>
+      <div class="fsize">$${f.sizeB}B<small>${f.status==="raising"?"target · ":"closed · "}${fmtDate(f.date)}</small></div>
+      <div class="ffocus">${esc(f.focus)} <span style="color:#3d3d3d">${esc(f.statusNote)}.</span></div>
+      <span class="status ${f.status}">${labels[f.status]}</span>
+      <div class="flinks">
+        <a href="${f.careers}" target="_blank" rel="noopener">Careers ↗</a>
+        <a href="${f.news}" target="_blank" rel="noopener">News ↗</a>
+      </div>
+    </div>`).join("");
+}
+
+function render(){
+  const vcs=getVCs();
+  const q=(document.getElementById("q").value||"").toLowerCase();
+  const stage=document.getElementById("stage").value;
+  const sort=document.getElementById("sort").value;
+  const tierOnly=document.getElementById("tierOnly").checked;
+
+  let rows=DATA.filter(c=>{
+    if(stage && c.round.type!==stage) return false;
+    if(tierOnly && !hasTierLead(c,vcs)) return false;
+    if(q){ const hay=(c.name+" "+c.desc+" "+c.location+" "+c.round.investors.join(" ")).toLowerCase();
+      if(!hay.includes(q)) return false; }
+    return true;
+  });
+  rows.sort((a,b)=>{
+    if(sort==="amount") return b.round.amountM-a.round.amountM;
+    if(sort==="jobs") return (b.jobs.total||0)-(a.jobs.total||0);
+    if(sort==="growth") return (b.growth6m??-99)-(a.growth6m??-99);
+    return b.round.date.localeCompare(a.round.date);
+  });
+
+  document.getElementById("stCompanies").textContent=rows.length;
+  document.getElementById("stJobs").textContent=rows.reduce((s,c)=>s+(c.jobs.total||0),0).toLocaleString();
+  const total=rows.reduce((s,c)=>s+c.round.amountM,0);
+  document.getElementById("stRaised").textContent="$"+(total>=1000?(total/1000).toFixed(2)+"B":total+"M");
+
+  const grid=document.getElementById("grid");
+  if(!rows.length){ grid.innerHTML='<div class="empty">No companies match the current filters.</div>'; return; }
+  grid.innerHTML=rows.map(c=>{
+    const id=cid(c);
+    const chips=c.round.investors.map(inv=>{
+      const lead=c.round.leads.includes(inv);
+      const tier=isTier(inv,vcs);
+      const cls=lead?"chip lead":(tier?"chip tier":"chip");
+      return `<span class="${cls}" title="${lead?'Lead investor':(tier?'Top-tier VC':'')}">${esc(inv)}${lead?' ★':''}</span>`;
+    }).join("");
+    const metaHtml = c.employees!=null
+      ? `<span><b>${c.employees}</b> employees</span>
+        <span>6-mo headcount <span class="${c.growth6m>=0?'up':'down'}">${(c.growth6m>=0?"+":"")+Math.round(c.growth6m*100)}%</span></span>`
+      : `<span class="chip newco" title="Added by the daily discovery task; headcount & live job refresh pending Apollo verification">🆕 New — unverified</span>`;
+    const jobsLabel = c.jobs.total==null ? "Roles: see careers page" : `${c.jobs.total} open role${c.jobs.total===1?"":"s"}`;
+    const roles=c.jobs.top.map(r=>`<a href="${r.u}" target="_blank" rel="noopener">→ ${esc(r.t)}</a>`).join("")
+      + (c.jobs.total!=null && c.jobs.total>c.jobs.top.length?`<div class="more">${c.jobs.top.length?"+ ":""}${c.jobs.total-c.jobs.top.length} more on careers page</div>`:"");
+    const refreshBtn = c.apolloId
+      ? `<button class="refresh" onclick="refreshJobs('${c.apolloId}',this)">Refresh jobs (1 credit)</button>`
+      : `<span style="font-size:11px;color:var(--muted)" title="Apollo enrichment pending">refresh unavailable</span>`;
+    return `<div class="card">
+      <div class="card-head">
+        <div><div class="cname"><a href="https://${c.domain}" target="_blank" rel="noopener">${esc(c.name)}</a></div>
+        <div class="loc">${esc(c.location)} · ${esc(c.domain)}</div></div>
+        <div class="round-badge">${esc(c.round.type)} · ${fmtAmt(c)}<small>${fmtDate(c.round.date)}</small></div>
+      </div>
+      <div class="desc">${esc(c.desc)}</div>
+      <div class="chips">${chips}</div>
+      <div class="meta">${metaHtml}</div>
+      <div class="hiring">
+        <div class="hiring-top"><b id="jt-${id}">${jobsLabel}</b>
+        <a class="careers" href="${c.jobs.careers}" target="_blank" rel="noopener">All openings ↗</a></div>
+        <div class="roles" id="roles-${id}">${roles}</div>
+      </div>
+      <div class="card-foot">
+        <a href="${c.round.news}" target="_blank" rel="noopener">Funding announcement ↗</a>
+        ${refreshBtn}
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function getApplied(){ try{ const s=localStorage.getItem("appliedJobs"); if(s) return JSON.parse(s);}catch(e){} return {}; }
+function setApplied(map){ try{ localStorage.setItem("appliedJobs", JSON.stringify(map)); }catch(e){} }
+function toggleApplied(url){
+  const map=getApplied();
+  if(map[url]) delete map[url]; else map[url]=new Date().toISOString().slice(0,10);
+  setApplied(map); renderVcJobs();
+}
+
+function renderVcJobs(){
+  const q=(document.getElementById("vjq").value||"").toLowerCase();
+  const type=document.getElementById("vjType").value;
+  const fit=document.getElementById("vjFitSel").value;
+  const hideApplied=document.getElementById("vjHideApplied").checked;
+  const applied=getApplied();
+  let rows=VCJOBS.filter(j=>{
+    if(type && j.type!==type) return false;
+    if(fit && j.fit!==fit) return false;
+    if(hideApplied && applied[j.u]) return false;
+    if(q){ const hay=(j.firm+" "+j.role+" "+j.city).toLowerCase(); if(!hay.includes(q)) return false; }
+    return true;
+  });
+  rows.sort((a,b)=>{
+    const af=freshFirmMatch(a.firm)?1:0, bf=freshFirmMatch(b.firm)?1:0;
+    if(af!==bf) return bf-af;
+    return b.posted.localeCompare(a.posted);
+  });
+  document.getElementById("vjCount").textContent=rows.length;
+  document.getElementById("vjFirms").textContent=new Set(rows.map(j=>j.firm)).size;
+  document.getElementById("vjFit").textContent=rows.filter(j=>j.fit==="fit").length;
+  document.getElementById("vjApplied").textContent=VCJOBS.filter(j=>applied[j.u]).length;
+  const el=document.getElementById("jobrows");
+  if(!rows.length){ el.innerHTML='<div class="empty">No roles match the current filters.</div>'; return; }
+  el.innerHTML=rows.map(j=>{
+    const isApplied=!!applied[j.u];
+    const fresh=freshFirmMatch(j.firm);
+    return `
+    <div class="jobrow${isApplied?' applied':''}">
+      <div class="role"><a href="${j.u}" target="_blank" rel="noopener">${esc(j.role)}</a>${fresh?' <span class="tag fresh" title="Firm recently closed a new fund">💰 Fresh fund</span>':''}</div>
+      <div class="firm">${esc(j.firm)}</div>
+      <div class="city">${esc(j.city)}</div>
+      <span class="tag ${j.type}">${j.type==="inv"?"Investment":"Platform"}</span>
+      <span class="tag ${j.fit}">${j.fit==="fit"?"Fits 0–2 yrs":"Stretch"}</span>
+      <div class="posted">${fmtDate(j.posted)}</div>
+      <label class="applied-check" title="${isApplied?'Applied on '+applied[j.u]:'Mark as applied'}">
+        <input type="checkbox" ${isApplied?'checked':''} onchange="toggleApplied('${j.u}')"> Applied${isApplied?' '+applied[j.u].slice(5).replace('-','/'):''}
+      </label>
+    </div>`;}).join("");
+}
+
+async function refreshJobs(id,btn){
+  if(!confirm("Pull live job postings from Apollo? This consumes 1 Apollo credit.")) return;
+  btn.disabled=true; btn.textContent="Refreshing…";
+  try{
+    const r=await window.cowork.callMcpTool(JOBS_TOOL,{id:id,per_page:100,
+      _rationale:"User-initiated refresh of job postings in funding+hiring dashboard.",
+      _conversation_ref:"vcdash-artifact"});
+    const data=r.structuredContent ?? JSON.parse(r.content[0].text);
+    if(r.isError||!data.organization_job_postings) throw new Error("unexpected response");
+    const c=DATA.find(x=>x.apolloId===id);
+    c.jobs.total=data.pagination?data.pagination.total_entries:data.organization_job_postings.length;
+    c.jobs.top=data.organization_job_postings.slice(0,4).map(j=>({
+      t:j.title+(j.city?" · "+j.city:""), u:j.url}));
+    render();
+  }catch(e){
+    btn.disabled=false; btn.textContent="Refresh failed – retry";
+  }
+}
+
+document.getElementById("q").addEventListener("input",render);
+document.getElementById("stage").addEventListener("change",render);
+document.getElementById("sort").addEventListener("change",render);
+document.getElementById("tierOnly").addEventListener("change",render);
+document.getElementById("vjq").addEventListener("input",renderVcJobs);
+document.getElementById("vjType").addEventListener("change",renderVcJobs);
+document.getElementById("vjFitSel").addEventListener("change",renderVcJobs);
+document.getElementById("vjHideApplied").addEventListener("change",renderVcJobs);
+document.getElementById("vcBtn").addEventListener("click",()=>{
+  const p=document.getElementById("vcPanel"); p.classList.toggle("open");
+  document.getElementById("vcText").value=getVCs().join(", ");
+});
+document.getElementById("vcSave").addEventListener("click",()=>{
+  const list=document.getElementById("vcText").value.split(",").map(s=>s.trim()).filter(Boolean);
+  if(list.length) setVCs(list);
+  document.getElementById("vcPanel").classList.remove("open"); render();
+});
+document.getElementById("vcReset").addEventListener("click",()=>{
+  setVCs(DEFAULT_VCS.slice());
+  document.getElementById("vcText").value=DEFAULT_VCS.join(", "); render();
+});
+render();
+renderVcJobs();
+renderFunds();
+try{ const t=localStorage.getItem("activeTab"); if(t) switchTab(t); }catch(e){}
+</script>
+</body>
+</html>
