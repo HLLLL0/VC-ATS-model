@@ -1,3 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freshly Funded &amp; Hiring</title>
+<style>
+  :root { color-scheme: light;
+    --bg:#f7f6f3; --card:#ffffff; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e3dc;
+    --accent:#b04a2f; --accent-soft:#fdeee8; --green:#1e7d4f; --green-soft:#e7f4ec;
+    --gold:#8a6d1d; --gold-soft:#f7f0d8; --blue:#2b5fa3; --blue-soft:#e8eef8;
+    --purple:#6b4aa3; --purple-soft:#efe9f8;
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; padding:20px; }
+  h1 { font-size:20px; font-weight:700; }
+  .sub { color:var(--muted); font-size:12.5px; margin-top:2px; }
+  .tabs { display:flex; gap:8px; margin:14px 0 0; }
+  .tab-btn { border:1px solid var(--line); background:var(--card); border-radius:999px; padding:7px 16px; font-size:13px; cursor:pointer; font-weight:600; color:var(--muted); }
+  .tab-btn.active { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .stats { display:flex; gap:10px; margin:14px 0; flex-wrap:wrap; }
+  .stat { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 16px; min-width:120px; }
+  .stat b { display:block; font-size:20px; }
+  .stat span { color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.04em; }
+  .controls { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; align-items:center; }
+  .controls input[type=text], .controls select {
+    background:var(--card); border:1px solid var(--line); border-radius:8px; padding:7px 10px; font-size:13px; color:var(--ink); }
+  .controls input[type=text] { width:200px; }
+  button { cursor:pointer; border:1px solid var(--line); background:var(--card); border-radius:8px; padding:7px 12px; font-size:12.5px; color:var(--ink); }
+  button:hover { border-color:var(--accent); color:var(--accent); }
+  #vcPanel { display:none; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px; margin-bottom:14px; }
+  #vcPanel.open { display:block; }
+  #vcPanel textarea { width:100%; height:70px; border:1px solid var(--line); border-radius:8px; padding:8px; font-size:12.5px; resize:vertical; }
+  #vcPanel .hint { color:var(--muted); font-size:11.5px; margin:6px 0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:10px; }
+  .card-head { display:flex; justify-content:space-between; gap:8px; align-items:flex-start; }
+  .cname { font-size:16px; font-weight:700; }
+  .cname a { color:inherit; text-decoration:none; }
+  .cname a:hover { color:var(--accent); }
+  .loc { color:var(--muted); font-size:12px; }
+  .round-badge { background:var(--accent-soft); color:var(--accent); border-radius:8px; padding:4px 10px; font-weight:700; font-size:12.5px; white-space:nowrap; text-align:right; }
+  .round-badge small { display:block; font-weight:500; color:var(--muted); font-size:10.5px; }
+  .desc { color:#3d3d3d; font-size:12.8px; }
+  .chips { display:flex; flex-wrap:wrap; gap:5px; }
+  .chip { border:1px solid var(--line); border-radius:999px; padding:2px 9px; font-size:11px; color:var(--muted); background:#fafaf8; }
+  .chip.tier { background:var(--gold-soft); color:var(--gold); border-color:#e7d9a8; font-weight:600; }
+  .chip.lead { background:var(--blue-soft); color:var(--blue); border-color:#c5d5ec; font-weight:600; }
+  .chip.newco { background:var(--purple-soft); color:var(--purple); border-color:#d8cdec; font-weight:600; }
+  .meta { display:flex; gap:14px; font-size:12px; color:var(--muted); flex-wrap:wrap; }
+  .meta b { color:var(--ink); }
+  .up { color:var(--green); font-weight:600; } .down { color:var(--accent); font-weight:600; }
+  .hiring { background:var(--green-soft); border-radius:10px; padding:10px 12px; }
+  .hiring-top { display:flex; justify-content:space-between; align-items:center; }
+  .hiring-top b { color:var(--green); font-size:13px; }
+  .hiring a.careers { font-size:12px; color:var(--green); font-weight:600; }
+  .roles { margin-top:6px; font-size:12px; }
+  .roles a { color:#2a5c43; text-decoration:none; display:block; padding:2px 0; }
+  .roles a:hover { text-decoration:underline; }
+  .roles .more { color:var(--muted); }
+  .card-foot { display:flex; justify-content:space-between; align-items:center; margin-top:auto; }
+  .card-foot a { font-size:12px; color:var(--blue); }
+  .refresh { font-size:11.5px; padding:5px 10px; }
+  .footer-note { color:var(--muted); font-size:11.5px; margin-top:18px; }
+  .empty { color:var(--muted); padding:30px; text-align:center; }
+  /* VC jobs table */
+  .jobrows { display:flex; flex-direction:column; gap:8px; }
+  .jobrow { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 16px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  .jobrow .role { font-weight:700; font-size:13.5px; min-width:220px; flex:1; }
+  .jobrow .role a { color:inherit; text-decoration:none; }
+  .jobrow .role a:hover { color:var(--accent); }
+  .jobrow .firm { color:var(--muted); font-size:12.5px; min-width:160px; }
+  .jobrow .city { color:var(--muted); font-size:12px; min-width:120px; }
+  .jobrow .posted { color:var(--muted); font-size:11.5px; min-width:80px; }
+  .tag { border-radius:999px; padding:2px 10px; font-size:10.5px; font-weight:700; letter-spacing:.02em; }
+  .tag.inv { background:var(--blue-soft); color:var(--blue); }
+  .tag.plat { background:var(--purple-soft); color:var(--purple); }
+  .tag.fit { background:var(--green-soft); color:var(--green); }
+  .tag.stretch { background:var(--gold-soft); color:var(--gold); }
+  .boards { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 0; }
+  .boards a { font-size:12px; color:var(--blue); border:1px solid var(--line); background:var(--card); border-radius:999px; padding:5px 12px; text-decoration:none; }
+  .boards a:hover { border-color:var(--blue); }
+  .jobrow.applied { opacity:.55; background:#fbfbf9; }
+  .jobrow.applied .role a { text-decoration:line-through; }
+  .applied-check { display:flex; align-items:center; gap:5px; font-size:11.5px; color:var(--muted); cursor:pointer; white-space:nowrap; }
+  .applied-check input { accent-color:var(--green); cursor:pointer; }
+  .tag.fresh { background:var(--gold-soft); color:var(--gold); }
+  .status { border-radius:999px; padding:3px 12px; font-size:11px; font-weight:700; white-space:nowrap; }
+  .status.hiring { background:var(--green-soft); color:var(--green); }
+  .status.program { background:var(--gold-soft); color:var(--gold); }
+  .status.none { background:#f0efeb; color:var(--muted); }
+  .status.raising { background:var(--blue-soft); color:var(--blue); }
+  .fundrow { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+  .fundrow .fname { font-weight:700; font-size:14.5px; min-width:170px; }
+  .fundrow .fname a { color:inherit; text-decoration:none; }
+  .fundrow .fname a:hover { color:var(--accent); }
+  .fundrow .fsize { color:var(--accent); font-weight:700; font-size:13.5px; min-width:130px; }
+  .fundrow .fsize small { display:block; color:var(--muted); font-weight:500; font-size:10.5px; }
+  .fundrow .ffocus { color:var(--muted); font-size:12px; flex:1; min-width:200px; }
+  .fundrow .flinks { display:flex; gap:10px; font-size:12px; }
+  .fundrow .flinks a { color:var(--blue); }
+</style>
+</head>
+<body>
+  <h1>Freshly Funded &amp; Hiring</h1>
+  <div class="sub" id="updatedLine">Recently funded startups + open roles at US VC funds · updated July 24, 2026</div>
+
+  <div class="tabs">
+    <button class="tab-btn active" id="tabBtnStartups" onclick="switchTab('startups')">Funded Startups</button>
+    <button class="tab-btn" id="tabBtnVcjobs" onclick="switchTab('vcjobs')">VC Jobs (0–2 yrs)</button>
+    <button class="tab-btn" id="tabBtnFunds" onclick="switchTab('funds')">Fresh Funds 💰</button>
+  </div>
+
+  <!-- ================= STARTUPS TAB ================= -->
+  <div id="tab-startups">
+  <div class="stats">
+    <div class="stat"><b id="stCompanies">0</b><span>Companies</span></div>
+    <div class="stat"><b id="stRaised">$0</b><span>Raised (latest rounds)</span></div>
+    <div class="stat"><b id="stJobs">0</b><span>Open roles</span></div>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="q" placeholder="Search company, sector, VC…">
+    <select id="stage">
+      <option value="">All stages</option>
+      <option>Seed</option><option>Series A</option><option>Series B</option>
+      <option>Series C</option><option>Series D</option><option>Series E</option><option>Series F</option>
+    </select>
+    <select id="sort">
+      <option value="date">Newest round</option>
+      <option value="amount">Largest round</option>
+      <option value="jobs">Most open roles</option>
+      <option value="growth">Fastest headcount growth</option>
+    </select>
+    <label style="font-size:12.5px;color:var(--muted)"><input type="checkbox" id="tierOnly"> Top-tier lead only</label>
+    <button id="vcBtn">Edit VC list</button>
+  </div>
+
+  <div id="vcPanel">
+    <div class="hint">Comma-separated list of VCs that count as "top-tier". Matching is case-insensitive and partial ("Sequoia" matches "Sequoia Capital"). Saved on this device.</div>
+    <textarea id="vcText"></textarea>
+    <div style="margin-top:8px; display:flex; gap:8px;">
+      <button id="vcSave">Save</button>
+      <button id="vcReset">Reset to default</button>
+    </div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="footer-note">
+    Funding &amp; headcount data: Apollo enrichment · Job posts: Apollo job postings (counts as of last refresh). "Refresh jobs" pulls live data and consumes <b>1 Apollo credit</b> per click. New companies are added by the daily discovery task; 🆕 = not yet Apollo-verified (headcount &amp; live job refresh pending).
+  </div>
+  </div>
+
+  <!-- ================= FRESH FUNDS TAB ================= -->
+  <div id="tab-funds" style="display:none">
+  <div class="stats">
+    <div class="stat"><b id="ffCount">0</b><span>US funds (recent close)</span></div>
+    <div class="stat"><b id="ffTotal">$0</b><span>Fresh capital</span></div>
+    <div class="stat"><b id="ffHiring">0</b><span>Hiring now</span></div>
+  </div>
+  <div class="jobrows" id="fundrows" style="gap:10px"></div>
+  <div class="footer-note">
+    US VC firms that recently closed (or are reportedly raising) new funds — fresh capital usually precedes team growth, so these are priority targets even without posted openings. Status shows whether they currently list roles. Jobs at these firms get a 💰 tag and sort first in the VC Jobs tab.
+  </div>
+  </div>
+
+  <!-- ================= VC JOBS TAB ================= -->
+  <div id="tab-vcjobs" style="display:none">
+  <div class="stats">
+    <div class="stat"><b id="vjCount">0</b><span>Open roles</span></div>
+    <div class="stat"><b id="vjFirms">0</b><span>Funds hiring</span></div>
+    <div class="stat"><b id="vjFit">0</b><span>Fit your experience</span></div>
+    <div class="stat"><b id="vjApplied">0</b><span>Applied</span></div>
+  </div>
+  <div class="controls">
+    <input type="text" id="vjq" placeholder="Search firm, role, city…">
+    <select id="vjType">
+      <option value="">Investment + Platform</option>
+      <option value="inv">Investment roles</option>
+      <option value="plat">Platform / ops roles</option>
+    </select>
+    <select id="vjFitSel">
+      <option value="">All seniority</option>
+      <option value="fit">Fits 0–2 yrs</option>
+      <option value="stretch">Stretch roles</option>
+    </select>
+    <label style="font-size:12.5px;color:var(--muted)"><input type="checkbox" id="vjHideApplied"> Hide applied</label>
+  </div>
+  <div class="jobrows" id="jobrows"></div>
+  <div class="boards">
+    <span style="font-size:12px;color:var(--muted);align-self:center">More boards:</span>
+    <a href="https://www.startupandvc.com/venture-capital-jobs" target="_blank" rel="noopener">Startup&amp;VC</a>
+    <a href="https://johngannonblog.com/venture-capital-analyst-jobs/" target="_blank" rel="noopener">John Gannon – Analyst</a>
+    <a href="https://johngannonblog.com/venture-capital-vc-associate-jobs/" target="_blank" rel="noopener">John Gannon – Associate</a>
+    <a href="https://venturecapitalcareers.com/jobs" target="_blank" rel="noopener">VC Careers</a>
+    <a href="https://www.vcstack.com/job" target="_blank" rel="noopener">VC Stack</a>
+    <a href="https://wellfound.com/role/l/venture-capital-analyst/united-states" target="_blank" rel="noopener">Wellfound</a>
+  </div>
+  <div class="footer-note">
+    US fund roles matched to ~0–2 years of experience (Analyst, Associate, Fellow, junior Investor, junior platform). <b>Stretch</b> = typically asks 2–5 yrs but worth applying with a strong angle. Sourced from Startup&amp;VC and VC Careers boards; refreshed by the daily task. Not limited to top-tier funds.
+  </div>
+  </div>
+
+<script>
+const DEFAULT_VCS = ["Sequoia","Andreessen Horowitz","a16z","Benchmark","Accel","Lightspeed","Index Ventures","Greylock","Founders Fund","General Catalyst","Khosla","Kleiner Perkins","Bessemer","Insight Partners","ICONIQ","Coatue","Thrive Capital","GV","Battery Ventures","Redpoint","Menlo Ventures","IVP","NEA","Felicis","Union Square","Forerunner","Bond","Peak XV","Y Combinator","First Round"];
+
 const DATA = [
 {apolloId:"679bbd962ae5f70001ce50ff",name:"Town",domain:"town.com",location:"San Francisco, CA",desc:"Personal AI assistants that work across email, calendar, messages and work apps.",employees:29,growth6m:-0.17,round:{type:"Series A",amountM:55,cur:"$",date:"2026-06-03",leads:["Andreessen Horowitz"],investors:["Andreessen Horowitz","First Round Capital","Forerunner Ventures","Conviction","Alt Capital"],news:"https://www.techtimes.com/articles/317916/20260606/personal-ai-assistant-startup-town-raises-55-million-andreessen-horowitz.htm"},jobs:{total:3,careers:"https://jobs.ashbyhq.com/town",top:[{t:"AI Product Engineer · SF · $225–300K",u:"https://jobs.ashbyhq.com/town/0b261662-60c4-49e2-b351-118e57e5714b"},{t:"Staff Backend Engineer · SF · $250–300K",u:"https://jobs.ashbyhq.com/town/d54d6289-f351-4fe0-99b9-08c4467bd18b"},{t:"Business Operations · SF · $130–170K",u:"https://jobs.ashbyhq.com/town/52ff57cf-4e1f-4244-8504-92a52ef0dd9c"}]}},
 {apolloId:"627961d589096b00f5a9ce56",name:"NewLimit",domain:"newlimit.com",location:"South San Francisco, CA",desc:"Epigenetic reprogramming medicines targeting aging; co-founded by Brian Armstrong.",employees:51,growth6m:0.15,round:{type:"Series C",amountM:435,cur:"$",date:"2026-06-05",leads:["Founders Fund"],investors:["Founders Fund","Kleiner Perkins","Thrive Capital","Valor Equity Partners","Greenoaks","Lilly Ventures","Nat Friedman","Quiet Capital"],news:"https://blog.newlimit.com/p/newlimit-raises-435m-led-by-founders"},jobs:{total:17,careers:"https://job-boards.greenhouse.io/newlimit",top:[{t:"Head of Manufacturing",u:"https://job-boards.greenhouse.io/newlimit/jobs/5988743004"},{t:"VP, Clinical Development",u:"https://job-boards.greenhouse.io/newlimit/jobs/5874818004"},{t:"Senior Scientist, mRNA Engineering",u:"https://job-boards.greenhouse.io/newlimit/jobs/5979490004"},{t:"Computational Biologist",u:"https://job-boards.greenhouse.io/newlimit/jobs/5819398004"}]}},
@@ -113,3 +319,265 @@ const DATA = [
 {unverified:true,name:"Ellis",domain:"unconfirmed",location:"New York, NY",desc:"AI-native operations platform for private credit managers; AI agents centralize documents, accounting data and correspondence. Founded by Cadre co-founder Ryan Williams.",round:{type:"Seed",amountM:10,cur:"$",date:"2026-07-30",leads:["First Round Capital"],investors:["First Round Capital","645 Ventures","Harlem Capital","Khosla Ventures","Slow Ventures","Josh Kushner (Thrive)","Mellody Hobson","Immad Akhund"],news:"https://techcrunch.com/2026/07/31/repeat-founder-ryan-williams-raises-10m-seed-for-an-ai-startup-for-private-credit-managers/"},jobs:{total:null,careers:null,top:[]}},
 {unverified:true,name:"Simile",domain:"simile.com",location:"San Francisco, CA",desc:"Simulated 'synthetic users' for market & product research; AI personas built on Stanford Generative Agents work (founder Joon Sung Park). Customers incl. CVS, Gallup, Wealthfront, Suntory.",round:{type:"Series B",amountM:200,cur:"$",date:"2026-07-30",leads:["Greenoaks"],investors:["Greenoaks","Index Ventures","Hanabi Capital","Bain Capital Ventures","A*","Factory","Definition","CVS Health Ventures"],news:"https://techcrunch.com/2026/07/30/synthetic-user-startup-simile-raises-200m-at-2b-valuation-5-months-after-100m-series-a/"},jobs:{total:7,careers:"https://jobs.ashbyhq.com/simile",top:[]}}
 ];
+
+const VCJOBS = [
+ {firm:"B Capital Group",role:"Associate",city:"New York, NY",type:"inv",fit:"fit",posted:"2026-07-05",u:"https://www.startupandvc.com/venture-capital-jobs/associate-9a2fb"},
+ {firm:"DRW Venture Capital",role:"Analyst",city:"Chicago, IL",type:"inv",fit:"fit",posted:"2026-07-05",u:"https://www.startupandvc.com/venture-capital-jobs/analyst-39b3f"},
+ {firm:"Upfront Ventures",role:"Associate",city:"Los Angeles, CA",type:"inv",fit:"fit",posted:"2026-07-05",u:"https://www.startupandvc.com/venture-capital-jobs/associate-7271a"},
+ {firm:"Remarkable Ventures",role:"IR Associate (part-time)",city:"New York, NY",type:"plat",fit:"fit",posted:"2026-07-05",u:"https://www.startupandvc.com/venture-capital-jobs/ir-associate-41aeb"},
+ {firm:"Galaxy (Ventures)",role:"Investor",city:"New York, NY",type:"inv",fit:"fit",posted:"2026-07-05",u:"https://www.startupandvc.com/venture-capital-jobs/investor-85103"},
+ {firm:"M12 — Microsoft's Venture Fund",role:"Associate",city:"San Francisco, CA",type:"inv",fit:"fit",posted:"2026-07-05",u:"https://www.startupandvc.com/venture-capital-jobs/associate-7d381"},
+ {firm:"Healthworx",role:"Senior Associate",city:"Washington, DC",type:"inv",fit:"stretch",posted:"2026-07-01",u:"https://www.startupandvc.com/venture-capital-jobs/senior-associate-dbd47"},
+ {firm:"Primary Venture Partners",role:"Associate",city:"New York, NY",type:"inv",fit:"fit",posted:"2026-07-01",u:"https://www.startupandvc.com/venture-capital-jobs/associate-093b4"},
+ {firm:"Capital Factory",role:"Associate",city:"Austin, TX",type:"inv",fit:"fit",posted:"2026-07-01",u:"https://www.startupandvc.com/venture-capital-jobs/associate-907bb"},
+ {firm:"Pear VC",role:"Investor",city:"San Francisco, CA",type:"inv",fit:"fit",posted:"2026-07-01",u:"https://www.startupandvc.com/venture-capital-jobs/investor-4624f"},
+ {firm:"Emergence Capital",role:"Associate",city:"San Francisco, CA",type:"inv",fit:"fit",posted:"2026-06-28",u:"https://www.startupandvc.com/venture-capital-jobs/associate-2309c"},
+ {firm:"General Atlantic",role:"Associate",city:"New York, NY",type:"inv",fit:"fit",posted:"2026-06-28",u:"https://www.startupandvc.com/venture-capital-jobs/associate-3d43d"},
+ {firm:"Counterpart Ventures",role:"Associate",city:"San Francisco, CA",type:"inv",fit:"fit",posted:"2026-06-28",u:"https://www.startupandvc.com/venture-capital-jobs/associate-68635"},
+ {firm:"Upfront Ventures",role:"Associate",city:"Los Angeles, CA",type:"inv",fit:"fit",posted:"2026-06-28",u:"https://www.startupandvc.com/venture-capital-jobs/associate-4130b"},
+ {firm:"Applied Ventures",role:"Senior Associate",city:"Santa Clara, CA",type:"inv",fit:"stretch",posted:"2026-06-25",u:"https://www.startupandvc.com/venture-capital-jobs/senior-associate-095a3"},
+ {firm:"Galaxy (Ventures)",role:"Investor",city:"New York, NY",type:"inv",fit:"fit",posted:"2026-06-25",u:"https://www.startupandvc.com/venture-capital-jobs/investor-9dee9"},
+ {firm:"Savano Capital Partners",role:"Associate",city:"Washington, DC",type:"inv",fit:"fit",posted:"2026-06-25",u:"https://www.startupandvc.com/venture-capital-jobs/associate-439ff"},
+ {firm:"Ajinomoto Corporate VC",role:"Fellowship",city:"Remote (US)",type:"inv",fit:"fit",posted:"2026-06-25",u:"https://www.startupandvc.com/venture-capital-jobs/fellowship-29114"},
+ {firm:"Samsung Next",role:"Investor",city:"Mountain View, CA",type:"inv",fit:"fit",posted:"2026-06-22",u:"https://www.startupandvc.com/venture-capital-jobs/investor-f7c8c"},
+ {firm:"Alpaca VC",role:"Associate",city:"New York, NY",type:"inv",fit:"fit",posted:"2026-06-22",u:"https://www.startupandvc.com/venture-capital-jobs/associate-804d8"},
+ {firm:"Starfire Ventures",role:"Investor",city:"New York, NY",type:"inv",fit:"fit",posted:"2026-06-09",u:"https://venturecapitalcareers.com/companies/serena-ventures/jobs/investor-5"},
+ {firm:"Yale Ventures",role:"Program Manager, Investor Network",city:"New Haven, CT",type:"plat",fit:"fit",posted:"2026-06-09",u:"https://venturecapitalcareers.com/companies/yale-university/jobs/program-manager-investor-network-yale-ventures"},
+ {firm:"Alpenglow Ventures",role:"Chief of Staff",city:"San Francisco, CA",type:"plat",fit:"stretch",posted:"2026-06-09",u:"https://venturecapitalcareers.com/companies/alpenglow-ventures/jobs/chief-of-staff-7"}
+];
+
+/* US VC firms with recent fund closes. status: hiring|program|none|raising */
+const FRESHFUNDS = [
+ {firm:"B Capital",aliases:["B Capital Group"],sizeB:0.5,date:"2026-07-02",focus:"Ascent Fund III — $500M final close at hard cap; early-stage (seed/Series A) enterprise, AI, fintech & healthcare.",status:"hiring",statusNote:"Associate roles open in New York & San Francisco (see VC Jobs tab)",
+  news:"https://www.fin-news.com/2026/07/06/b-capital-closes-third-early-stage-vc-fund/",careers:"https://www.bcapgroup.com/careers/"},
+ {firm:"Harpoon Ventures",aliases:["Harpoon"],sizeB:0.155,date:"2026-06-30",focus:"Oversubscribed Fund IV $155M — early-stage AI, deep tech & defense ('critical technologies'). >$450M AUM (San Diego). Originally seeded by Lightspeed & a16z.",status:"hiring",statusNote:"VC Associate (San Diego) listed",
+  news:"https://www.prnewswire.com/news-releases/harpoon-ventures-closes-oversubscribed-155-million-fund-iv-to-back-founders-building-critical-technologies-302814101.html",careers:"https://www.harpoon.vc/"},
+ {firm:"Framework Ventures",aliases:["Framework"],sizeB:0.4,date:"2026-06-26",focus:"Fund IV — $400M for frontier tech: crypto, AI and energy/compute (San Francisco).",status:"none",statusNote:"No junior openings found on careers page",
+  news:"https://fortune.com/2026/06/26/framework-ventures-fourth-fund-400-million-frontier-technology-vance-spencer-michael-anderson/",careers:"https://framework.ventures/"},
+ {firm:"Benchmark",aliases:[],sizeB:2,date:"2026-06-03",focus:"$750M Fund 12 (early-stage) + $1.25B first-ever growth fund — late-stage AI bets; breaks 20+ yrs of small-fund tradition.",status:"none",statusNote:"Tiny equal-partner model; no junior openings",
+  news:"https://techcrunch.com/2026/06/03/benchmark-raises-its-first-ever-growth-fund-as-part-of-2b-capital-raise/",careers:"https://www.benchmark.com/"},
+ {firm:"Gigascale Capital",aliases:["Gigascale"],sizeB:0.25,date:"2026-06-02",focus:"First fund — physical economy: clean energy, grid infra, AI for manufacturing. Founded by ex-Meta CTO Mike Schroepfer (Palo Alto).",status:"none",statusNote:"Careers page lists portfolio-company roles only",
+  news:"https://vcwire.tech/2026/06/02/gigascale-capital-closes-first-fund-at-250m/",careers:"https://careers.gigascale.com/jobs"},
+ {firm:"Haun Ventures",aliases:[],sizeB:1,date:"2026-05-06",focus:"Fund II $1B+ — crypto, tokenization, AI agents (Menlo Park).",status:"none",statusNote:"No junior openings listed",
+  news:"https://vcwire.tech/2026/05/06/haun-ventures-closes-fund-ii-at-over-1-billion/",careers:"https://www.haun.co/"},
+ {firm:"Kleiner Perkins",aliases:["KP"],sizeB:3.5,date:"2026-03-24",focus:"KP22 ($1B early-stage) + $2.5B growth — all-in on AI.",status:"program",statusNote:"KP Fellows program — strong 0-2 yr entry point",
+  news:"https://techcrunch.com/2026/03/24/with-3-5b-in-fresh-capital-kleiner-perkins-is-going-all-in-on-ai/",careers:"https://www.kleinerperkins.com/careers/"},
+ {firm:"General Catalyst",aliases:["GC"],sizeB:10,date:"2026-03-11",focus:"Reportedly raising ~$10B mega-fund (per TechCrunch).",status:"raising",statusNote:"Raising (reported) — watch careers page",
+  news:"https://techcrunch.com/2026/03/11/vc-mega-funds-are-back-with-general-catalyst-spark-rumored-to-be-raising-billions/",careers:"https://www.generalcatalyst.com/careers"},
+ {firm:"Thrive Capital",aliases:["Thrive"],sizeB:10,date:"2026-02-01",focus:"Thrive X — $10B flagship for early + growth stage, AI-heavy.",status:"none",statusNote:"No junior openings listed",
+  news:"https://visible.vc/blog/largest-vc-investors/",careers:"https://thrivecap.com/"}
+];
+
+function freshFirmMatch(firm){
+  const f=firm.toLowerCase();
+  return FRESHFUNDS.find(x=>f.includes(x.firm.toLowerCase())||x.aliases.some(a=>f.includes(a.toLowerCase())));
+}
+
+const JOBS_TOOL = "mcp__b8b33260-7ae7-489b-9945-fb062ba299a1__apollo_organizations_job_postings";
+
+function getVCs(){ try{ const s=localStorage.getItem("tierVCs"); if(s) return JSON.parse(s);}catch(e){} return DEFAULT_VCS.slice(); }
+function setVCs(list){ try{ localStorage.setItem("tierVCs", JSON.stringify(list)); }catch(e){} }
+function isTier(inv, vcs){ const l=inv.toLowerCase(); return vcs.some(v=>l.includes(v.toLowerCase())); }
+function hasTierLead(c, vcs){ return c.round.leads.some(l=>isTier(l,vcs)); }
+function fmtAmt(c){ return c.round.cur + (c.round.amountM>=1000 ? (c.round.amountM/1000).toFixed(1)+"B" : c.round.amountM+"M"); }
+function fmtDate(d){ return new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); }
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+function cid(c){ return c.apolloId || c.domain.replace(/[^a-z0-9]/gi,""); }
+
+function switchTab(t){
+  document.getElementById("tab-startups").style.display = t==="startups"?"":"none";
+  document.getElementById("tab-vcjobs").style.display = t==="vcjobs"?"":"none";
+  document.getElementById("tab-funds").style.display = t==="funds"?"":"none";
+  document.getElementById("tabBtnStartups").classList.toggle("active",t==="startups");
+  document.getElementById("tabBtnVcjobs").classList.toggle("active",t==="vcjobs");
+  document.getElementById("tabBtnFunds").classList.toggle("active",t==="funds");
+  try{ localStorage.setItem("activeTab",t); }catch(e){}
+}
+
+function renderFunds(){
+  const rows=FRESHFUNDS.slice().sort((a,b)=>b.date.localeCompare(a.date));
+  document.getElementById("ffCount").textContent=rows.length;
+  const tot=rows.filter(f=>f.status!=="raising").reduce((s,f)=>s+f.sizeB,0);
+  document.getElementById("ffTotal").textContent="$"+tot.toFixed(1)+"B";
+  document.getElementById("ffHiring").textContent=rows.filter(f=>f.status==="hiring"||f.status==="program").length;
+  const labels={hiring:"Hiring now",program:"Fellows / program",none:"No openings listed",raising:"Raising (reported)"};
+  document.getElementById("fundrows").innerHTML=rows.map(f=>`
+    <div class="fundrow">
+      <div class="fname"><a href="${f.careers}" target="_blank" rel="noopener">${esc(f.firm)}</a></div>
+      <div class="fsize">$${f.sizeB}B<small>${f.status==="raising"?"target · ":"closed · "}${fmtDate(f.date)}</small></div>
+      <div class="ffocus">${esc(f.focus)} <span style="color:#3d3d3d">${esc(f.statusNote)}.</span></div>
+      <span class="status ${f.status}">${labels[f.status]}</span>
+      <div class="flinks">
+        <a href="${f.careers}" target="_blank" rel="noopener">Careers ↗</a>
+        <a href="${f.news}" target="_blank" rel="noopener">News ↗</a>
+      </div>
+    </div>`).join("");
+}
+
+function render(){
+  const vcs=getVCs();
+  const q=(document.getElementById("q").value||"").toLowerCase();
+  const stage=document.getElementById("stage").value;
+  const sort=document.getElementById("sort").value;
+  const tierOnly=document.getElementById("tierOnly").checked;
+
+  let rows=DATA.filter(c=>{
+    if(stage && c.round.type!==stage) return false;
+    if(tierOnly && !hasTierLead(c,vcs)) return false;
+    if(q){ const hay=(c.name+" "+c.desc+" "+c.location+" "+c.round.investors.join(" ")).toLowerCase();
+      if(!hay.includes(q)) return false; }
+    return true;
+  });
+  rows.sort((a,b)=>{
+    if(sort==="amount") return b.round.amountM-a.round.amountM;
+    if(sort==="jobs") return (b.jobs.total||0)-(a.jobs.total||0);
+    if(sort==="growth") return (b.growth6m??-99)-(a.growth6m??-99);
+    return b.round.date.localeCompare(a.round.date);
+  });
+
+  document.getElementById("stCompanies").textContent=rows.length;
+  document.getElementById("stJobs").textContent=rows.reduce((s,c)=>s+(c.jobs.total||0),0).toLocaleString();
+  const total=rows.reduce((s,c)=>s+c.round.amountM,0);
+  document.getElementById("stRaised").textContent="$"+(total>=1000?(total/1000).toFixed(2)+"B":total+"M");
+
+  const grid=document.getElementById("grid");
+  if(!rows.length){ grid.innerHTML='<div class="empty">No companies match the current filters.</div>'; return; }
+  grid.innerHTML=rows.map(c=>{
+    const id=cid(c);
+    const chips=c.round.investors.map(inv=>{
+      const lead=c.round.leads.includes(inv);
+      const tier=isTier(inv,vcs);
+      const cls=lead?"chip lead":(tier?"chip tier":"chip");
+      return `<span class="${cls}" title="${lead?'Lead investor':(tier?'Top-tier VC':'')}">${esc(inv)}${lead?' ★':''}</span>`;
+    }).join("");
+    const metaHtml = c.employees!=null
+      ? `<span><b>${c.employees}</b> employees</span>
+        <span>6-mo headcount <span class="${c.growth6m>=0?'up':'down'}">${(c.growth6m>=0?"+":"")+Math.round(c.growth6m*100)}%</span></span>`
+      : `<span class="chip newco" title="Added by the daily discovery task; headcount & live job refresh pending Apollo verification">🆕 New — unverified</span>`;
+    const jobsLabel = c.jobs.total==null ? "Roles: see careers page" : `${c.jobs.total} open role${c.jobs.total===1?"":"s"}`;
+    const roles=c.jobs.top.map(r=>`<a href="${r.u}" target="_blank" rel="noopener">→ ${esc(r.t)}</a>`).join("")
+      + (c.jobs.total!=null && c.jobs.total>c.jobs.top.length?`<div class="more">${c.jobs.top.length?"+ ":""}${c.jobs.total-c.jobs.top.length} more on careers page</div>`:"");
+    const refreshBtn = (c.apolloId && LIVE_REFRESH_AVAILABLE)
+      ? `<button class="refresh" onclick="refreshJobs('${c.apolloId}',this)">Refresh jobs (1 credit)</button>`
+      : `<span style="font-size:11px;color:var(--muted)" title="Live refresh only works inside Cowork">refresh unavailable</span>`;
+    return `<div class="card">
+      <div class="card-head">
+        <div><div class="cname"><a href="https://${c.domain}" target="_blank" rel="noopener">${esc(c.name)}</a></div>
+        <div class="loc">${esc(c.location)} · ${esc(c.domain)}</div></div>
+        <div class="round-badge">${esc(c.round.type)} · ${fmtAmt(c)}<small>${fmtDate(c.round.date)}</small></div>
+      </div>
+      <div class="desc">${esc(c.desc)}</div>
+      <div class="chips">${chips}</div>
+      <div class="meta">${metaHtml}</div>
+      <div class="hiring">
+        <div class="hiring-top"><b id="jt-${id}">${jobsLabel}</b>
+        <a class="careers" href="${c.jobs.careers}" target="_blank" rel="noopener">All openings ↗</a></div>
+        <div class="roles" id="roles-${id}">${roles}</div>
+      </div>
+      <div class="card-foot">
+        <a href="${c.round.news}" target="_blank" rel="noopener">Funding announcement ↗</a>
+        ${refreshBtn}
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function getApplied(){ try{ const s=localStorage.getItem("appliedJobs"); if(s) return JSON.parse(s);}catch(e){} return {}; }
+function setApplied(map){ try{ localStorage.setItem("appliedJobs", JSON.stringify(map)); }catch(e){} }
+function toggleApplied(url){
+  const map=getApplied();
+  if(map[url]) delete map[url]; else map[url]=new Date().toISOString().slice(0,10);
+  setApplied(map); renderVcJobs();
+}
+
+function renderVcJobs(){
+  const q=(document.getElementById("vjq").value||"").toLowerCase();
+  const type=document.getElementById("vjType").value;
+  const fit=document.getElementById("vjFitSel").value;
+  const hideApplied=document.getElementById("vjHideApplied").checked;
+  const applied=getApplied();
+  let rows=VCJOBS.filter(j=>{
+    if(type && j.type!==type) return false;
+    if(fit && j.fit!==fit) return false;
+    if(hideApplied && applied[j.u]) return false;
+    if(q){ const hay=(j.firm+" "+j.role+" "+j.city).toLowerCase(); if(!hay.includes(q)) return false; }
+    return true;
+  });
+  rows.sort((a,b)=>{
+    const af=freshFirmMatch(a.firm)?1:0, bf=freshFirmMatch(b.firm)?1:0;
+    if(af!==bf) return bf-af;
+    return b.posted.localeCompare(a.posted);
+  });
+  document.getElementById("vjCount").textContent=rows.length;
+  document.getElementById("vjFirms").textContent=new Set(rows.map(j=>j.firm)).size;
+  document.getElementById("vjFit").textContent=rows.filter(j=>j.fit==="fit").length;
+  document.getElementById("vjApplied").textContent=VCJOBS.filter(j=>applied[j.u]).length;
+  const el=document.getElementById("jobrows");
+  if(!rows.length){ el.innerHTML='<div class="empty">No roles match the current filters.</div>'; return; }
+  el.innerHTML=rows.map(j=>{
+    const isApplied=!!applied[j.u];
+    const fresh=freshFirmMatch(j.firm);
+    return `
+    <div class="jobrow${isApplied?' applied':''}">
+      <div class="role"><a href="${j.u}" target="_blank" rel="noopener">${esc(j.role)}</a>${fresh?' <span class="tag fresh" title="Firm recently closed a new fund">💰 Fresh fund</span>':''}</div>
+      <div class="firm">${esc(j.firm)}</div>
+      <div class="city">${esc(j.city)}</div>
+      <span class="tag ${j.type}">${j.type==="inv"?"Investment":"Platform"}</span>
+      <span class="tag ${j.fit}">${j.fit==="fit"?"Fits 0–2 yrs":"Stretch"}</span>
+      <div class="posted">${fmtDate(j.posted)}</div>
+      <label class="applied-check" title="${isApplied?'Applied on '+applied[j.u]:'Mark as applied'}">
+        <input type="checkbox" ${isApplied?'checked':''} onchange="toggleApplied('${j.u}')"> Applied${isApplied?' '+applied[j.u].slice(5).replace('-','/'):''}
+      </label>
+    </div>`;}).join("");
+}
+
+const LIVE_REFRESH_AVAILABLE = typeof window.cowork !== "undefined" && typeof window.cowork.callMcpTool === "function";
+
+async function refreshJobs(id,btn){
+  if(!LIVE_REFRESH_AVAILABLE){ btn.disabled=true; btn.textContent="Unavailable here"; return; }
+  if(!confirm("Pull live job postings from Apollo? This consumes 1 Apollo credit.")) return;
+  btn.disabled=true; btn.textContent="Refreshing…";
+  try{
+    const r=await window.cowork.callMcpTool(JOBS_TOOL,{id:id,per_page:100,
+      _rationale:"User-initiated refresh of job postings in funding+hiring dashboard.",
+      _conversation_ref:"vcdash-artifact"});
+    const data=r.structuredContent ?? JSON.parse(r.content[0].text);
+    if(r.isError||!data.organization_job_postings) throw new Error("unexpected response");
+    const c=DATA.find(x=>x.apolloId===id);
+    c.jobs.total=data.pagination?data.pagination.total_entries:data.organization_job_postings.length;
+    c.jobs.top=data.organization_job_postings.slice(0,4).map(j=>({
+      t:j.title+(j.city?" · "+j.city:""), u:j.url}));
+    render();
+  }catch(e){
+    btn.disabled=false; btn.textContent="Refresh failed – retry";
+  }
+}
+
+document.getElementById("q").addEventListener("input",render);
+document.getElementById("stage").addEventListener("change",render);
+document.getElementById("sort").addEventListener("change",render);
+document.getElementById("tierOnly").addEventListener("change",render);
+document.getElementById("vjq").addEventListener("input",renderVcJobs);
+document.getElementById("vjType").addEventListener("change",renderVcJobs);
+document.getElementById("vjFitSel").addEventListener("change",renderVcJobs);
+document.getElementById("vjHideApplied").addEventListener("change",renderVcJobs);
+document.getElementById("vcBtn").addEventListener("click",()=>{
+  const p=document.getElementById("vcPanel"); p.classList.toggle("open");
+  document.getElementById("vcText").value=getVCs().join(", ");
+});
+document.getElementById("vcSave").addEventListener("click",()=>{
+  const list=document.getElementById("vcText").value.split(",").map(s=>s.trim()).filter(Boolean);
+  if(list.length) setVCs(list);
+  document.getElementById("vcPanel").classList.remove("open"); render();
+});
+document.getElementById("vcReset").addEventListener("click",()=>{
+  setVCs(DEFAULT_VCS.slice());
+  document.getElementById("vcText").value=DEFAULT_VCS.join(", "); render();
+});
+render();
+renderVcJobs();
+renderFunds();
+try{ const t=localStorage.getItem("activeTab"); if(t) switchTab(t); }catch(e){}
+</script>
+</body>
+</html>
